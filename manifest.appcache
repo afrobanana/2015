@@ -1,8 +1,13 @@
 CACHE MANIFEST
-# Time: Tue Jul 07 2015 16:38:48 GMT+0300 (EEST)
+# Time: Tue Jul 07 2015 16:50:59 GMT+0300 (EEST)
 
 CACHE:
+festival/index.html
 index.html
+info/index.html
+location/index.html
+static/js/abr-2015.min.js
+static/css/abr-2015.min.css
 static/images/550x400-550x400-c09952.jpg
 static/images/lineup/abr-radio-344x0-65c386.jpg
 static/images/lineup/afro-banda-344x0-2351b2.jpg
