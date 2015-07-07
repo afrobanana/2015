@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Time: Tue Jul 07 2015 17:56:56 GMT+0300 (EEST)
+# Time: Tue Jul 07 2015 21:00:26 GMT+0300 (EEST)
 
 CACHE:
 festival/index.html
@@ -33,5 +33,9 @@ static/images/lineup/tony-cusack-344x0-57a064.jpg
 static/images/lineup/vassilaras-344x0-d8625c.jpg
 
 NETWORK:
+https://fonts.googleapis.com/css?family=Amatic+SC
+https://fonts.gstatic.com/s/amaticsc/v6/DPPfSFKxRTXvae2bKDzp5JBw1xU1rKptJj_0jans920.woff2
+https://fonts.googleapis.com/css?family=Slackey
+https://fonts.gstatic.com/s/slackey/v6/0MUhmNrdbF-OYk8JDhRKYQLUuEpTyoUstqEm5AMlJo4.woff2
 http://*
 https://*
