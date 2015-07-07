@@ -211,10 +211,13 @@ module.exports = function(grunt) {
           hash: true,
         },
         src: [
-          'index.html',
-          'static/js/*.min.js',
-          'static/css/*.min.css',
-          'static/images/**/*.jpg',
+        // pages
+          '**/*.html',
+          // files
+          '**/js/*.min.js',
+          '**/css/*.min.css',
+          '**/*.jpg',
+          '**/*.png',
         ],
         dest: '<%= pkg.build_dir %>/manifest.appcache'
       }
@@ -256,9 +259,12 @@ module.exports = function(grunt) {
                      // 'clean:build',
                      'build',
                      'minify',
-                     'gh-pages',
+                     'push',
                      'clean:grunt',
                      'clean:tmp',
+  ]);
+  grunt.registerTask('push', [
+                     'gh-pages',
   ]);
   grunt.registerTask('serve', [
                      'config',
@@ -275,8 +281,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
                      'config',
                      'shell:jekyllBuild',
-                     'imagemin',
-                     'manifest',
+                     'manifest'
   ]);
   grunt.registerTask('config', [
                      'convert:config',
@@ -288,12 +293,14 @@ module.exports = function(grunt) {
   grunt.registerTask('minify', [
                      // 'lint',
                      // 'build',
+                     'imagemin',
                      'useminPrepare',
                      'concat',
                      'uglify',
                      'cssmin',
-                     'newer:rev',
+                     // 'newer:rev',
                      'usemin',
-                     // 'htmlmin',
+                     'htmlmin',
+                     'manifest',
   ]);
 };

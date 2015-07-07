@@ -1,20 +1,3 @@
-- Home
-
-- Festival
---- Lineup
---- Art Projects
-
-- Info
---- Location / Map
---- Ammenities (food, accommodation)
---- Production
---- Contact
-
-
-Todo
-
-- organise tasks
-- separate folders for dev, build
 
 Requirements
 
