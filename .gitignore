@@ -4,5 +4,6 @@
 .grunt
 .serve
 .sass-cache
+.bundle
 _site
 node_modules

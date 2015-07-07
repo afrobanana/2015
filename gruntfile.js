@@ -196,7 +196,7 @@ module.exports = function(grunt) {
     },
     clean: {
       serve: '<%= pkg.serve_dir %>',
-      // build: '<%= pkg.build_dir %>',
+      build: '<%= pkg.build_dir %>',
       grunt: '.grunt',
       tmp: '.tmp',
       sass: '.sass-cache',
@@ -253,6 +253,7 @@ module.exports = function(grunt) {
                      // 'watch',
   ]);
   grunt.registerTask('deploy', [
+                     'clean:build',
                      'build',
                      'minify',
                      'gh-pages',
