@@ -4,7 +4,7 @@
   "title": "The Afro Banana Republic",
   "description": "The Afro Banana Republic (ABR)",
   "keywords": "alternative music festival cyprus",
-  "baseurl": "//afrobanana.github.io/2015",
+  "baseurl": "//2015.afrobanana.com",
   "GoogleAnalytics": "UA-25314979-1",
   "build_dir": "_site",
   "serve_dir": ".serve",
