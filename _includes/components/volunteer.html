@@ -1,0 +1,10 @@
+{% assign page = site.data.volunteer %}
+<a id="volunteer" class="side-nav--target"></a>
+<section class="block block--volunteer">
+  <header class="block--header">
+    <h2 class="block--title">{{ page.title }}</h2>
+  </header>
+  <main class="block--main block--volunteer--content">
+    {{ page.content | markdownify }}
+  </main>
+</section>

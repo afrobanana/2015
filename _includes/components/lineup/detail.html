@@ -1,0 +1,21 @@
+{% assign id = entry.name | remove:".md" %}
+<section id="lineup__{{ id }}" class="page lineup-page">
+  <section class="section" style="background:url({{ images_url }}lineup/{{ id }}/{{ id }}-bg.jpg) fixed no-repeat center 2.4em; background-size:cover'">
+    <section class="section-inner">
+      <h1 class="page-title">{{ entry.title }}</h1>
+      <h2 class="page-subtitle lineup-page-labels">
+        {% for tag in entry.tags %}
+        <span class="lineup-entry-label">{{ tag }}</span>
+        {% endfor %}
+      </h2>
+      <div class="text">
+        <div>{{ entry.content | markdownify }}</div>
+      </div>
+      <div class="lineup-page-links">
+        {% for link in entry.links %}{% for link_value in link %}
+        <a href="{{ link_value[1] }}" target="_blank">{{ link_value[0] }}</a>
+        {% endfor %}{% endfor %}
+      </div>
+    </section>
+  </section>
+</section>

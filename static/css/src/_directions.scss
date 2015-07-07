@@ -1,0 +1,34 @@
+.block--directions--content {
+  @extend %block--text;
+
+  @include column(3);
+
+  h3, ol {
+    @include column-content;
+    display: block;
+  }
+  h3 {
+    // -webkit-column-break-before:always;
+  }
+}
+
+
+.block--directions--map {
+  margin: ($gutter * 2) 0;
+  padding: $gutter 0;
+  line-height: 1;
+  border-top: 5px solid rgba(255,255,255, 0.5);
+  border-bottom: 5px solid rgba(255,255,255, 0.5);
+
+  a {
+    display: block;
+    box-shadow: 0 0 40px rgba(255,255,255,0.5);
+    span {
+      display: none;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

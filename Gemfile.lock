@@ -1,0 +1,10 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_magick (4.2.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mini_magick (= 4.2.7)
