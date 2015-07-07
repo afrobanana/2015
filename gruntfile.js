@@ -33,9 +33,9 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
             expand: true,
-            cwd: '.<%=  pkg.assets.images %>_src',
+            cwd: '<%= pkg.build_dir %><%=  pkg.assets.images %>',
             src: ['**/*.{png,jpg,gif}'],
-            dest: '.<%=  pkg.assets.images %>'
+            dest: '<%= pkg.build_dir %><%=  pkg.assets.images %>'
         }]
       }
     },
@@ -140,11 +140,11 @@ module.exports = function(grunt) {
         algorithm: 'md5',
         length: 8
       },
-      images: {
-        src: [
-          '<%= pkg.build_dir %><%= pkg.assets.images %>**/*.{jpg,png,gif,jpeg}'
-        ]
-      },
+      // images: {
+      //   src: [
+      //     '<%= pkg.build_dir %><%= pkg.assets.images %>**/*.{jpg,png,gif,jpeg}'
+      //   ]
+      // },
       css: {
         src: [
           '<%= pkg.build_dir %><%= pkg.assets.css %><%= pkg.name %>.min.css',
@@ -253,7 +253,7 @@ module.exports = function(grunt) {
                      // 'watch',
   ]);
   grunt.registerTask('deploy', [
-                     'clean:build',
+                     // 'clean:build',
                      'build',
                      'minify',
                      'gh-pages',
@@ -274,8 +274,8 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('build', [
                      'config',
-                     'newer:imagemin',
                      'shell:jekyllBuild',
+                     'imagemin',
                      'manifest',
   ]);
   grunt.registerTask('config', [
