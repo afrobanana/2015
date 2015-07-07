@@ -3,10 +3,10 @@
   <channel>
     <title>The Afro Banana Republic</title>
     <description>The Afro Banana Republic (ABR)</description>
-    <link>//afrobanana.github.io/2015/</link>
-    <atom:link href="//afrobanana.github.io/2015/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Jul 2015 17:07:52 +0300</pubDate>
-    <lastBuildDate>Tue, 07 Jul 2015 17:07:52 +0300</lastBuildDate>
+    <link>//2015.afrobanana.com/</link>
+    <atom:link href="//2015.afrobanana.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 07 Jul 2015 17:09:42 +0300</pubDate>
+    <lastBuildDate>Tue, 07 Jul 2015 17:09:42 +0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
   </channel>
