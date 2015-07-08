@@ -221,107 +221,6 @@ h2.block--title {
   top: auto;
   bottom: 2em; }
 
-.side-nav {
-  -moz-column-count: 3;
-  -moz-column-gap: 16px;
-  -moz-column-width: auto;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 16px;
-  -webkit-column-width: auto;
-  column-count: 3;
-  column-gap: 16px;
-  column-width: auto;
-  vertical-align: top; }
-  .side-nav ol {
-    list-style: none; }
-
-.side-nav--item {
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  -o-column-break-inside: avoid;
-  -ms-column-break-inside: avoid;
-  column-break-inside: avoid;
-  display: inline-block;
-  width: 100%;
-  position: relative; }
-
-.side-nav {
-  line-height: 1;
-  text-align: center;
-  transition: all 500ms; }
-  .side-nav.is-sticky {
-    padding: 0;
-    top: 0;
-    z-index: 10; }
-
-.side-nav--text {
-  color: #111;
-  font-family: 'Slackey', cursive;
-  font-weight: 100;
-  text-align: center;
-  display: inline-block;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  padding: 0.5em 0.5em 0.5em 2em;
-  font-size: 1.6em;
-  white-space: nowrap;
-  position: relative;
-  background: linear-gradient(135deg, transparent 10px, #e5ba65 0) top left, linear-gradient(225deg, transparent 10px, #e5ba65 0) top right, linear-gradient(315deg, transparent 10px, #e5ba65 0) bottom right, linear-gradient(45deg, transparent 10px, #e5ba65 0) bottom left;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px);
-  transition: all 500ms; }
-  .side-nav--text:before {
-    content: " ";
-    background-color: #3c7083;
-    height: 1em;
-    width: 1em;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    border-radius: 100%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-    transform: translateY(-50%) translateX(50%); }
-  .side-nav--text span {
-    font-size: 0.6em;
-    display: block;
-    text-transform: uppercase;
-    text-align: left;
-    color: #fff;
-    text-shadow: 0 0 2px #000; }
-  .side-nav--text:hover, .side-nav--text.active {
-    background: linear-gradient(135deg, transparent 10px, orange 0) top left, linear-gradient(225deg, transparent 10px, orange 0) top right, linear-gradient(315deg, transparent 10px, orange 0) bottom right, linear-gradient(45deg, transparent 10px, orange 0) bottom left;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, orange 15px); }
-
-.side-nav + .side-nav--target + section .block--title {
-  padding: 0; }
-
-.side-nav--item li {
-  margin: 16px 0;
-  font-size: 1em; }
-  .side-nav--item li a {
-    text-decoration: none;
-    padding: 8px;
-    background-color: transparent;
-    transition: all 100ms; }
-    .side-nav--item li a:hover {
-      background-color: rgba(0, 0, 0, 0.5); }
-  .side-nav--item li em, .side-nav--item li span {
-    display: inline-block;
-    vertical-align: middle; }
-  .side-nav--item li em {
-    font-style: normal;
-    max-width: 15em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-  .side-nav--item li span {
-    font-size: 0.8em;
-    color: rgba(255, 255, 255, 0.5); }
-
 .block--lineup--entries img {
   float: left;
   margin: 0 16px 0 0;
@@ -505,5 +404,102 @@ h2.block--title {
   column-break-inside: avoid;
   display: inline-block;
   width: 100%; }
+
+.block--timetable--sections {
+  -moz-column-count: 3;
+  -moz-column-gap: 16px;
+  -moz-column-width: auto;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 16px;
+  -webkit-column-width: auto;
+  column-count: 3;
+  column-gap: 16px;
+  column-width: auto;
+  vertical-align: top;
+  line-height: 1;
+  text-align: center;
+  transition: all 500ms;
+  list-style: none; }
+
+.block--timetable--section {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 16px 0;
+  font-size: 1em; }
+  .block--timetable--section li {
+    margin: 16px 0;
+    font-size: 1em; }
+
+.block--timetable--section--title {
+  color: #111;
+  font-family: Slackey,cursive;
+  font-weight: 100;
+  text-align: center;
+  display: inline-block;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: .5em .5em .5em 2em;
+  font-size: 1.6em;
+  white-space: nowrap;
+  position: relative;
+  background: linear-gradient(135deg, transparent 10px, #e5ba65 0) top left, linear-gradient(225deg, transparent 10px, #e5ba65 0) top right, linear-gradient(315deg, transparent 10px, #e5ba65 0) bottom right, linear-gradient(45deg, transparent 10px, #e5ba65 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px);
+  transition: all 500ms; }
+  .block--timetable--section--title:before {
+    content: " ";
+    background-color: #3c7083;
+    height: 1em;
+    width: 1em;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) translateX(50%); }
+  .block--timetable--section--title:hover {
+    background: linear-gradient(135deg, transparent 10px, orange 0) top left, linear-gradient(225deg, transparent 10px, orange 0) top right, linear-gradient(315deg, transparent 10px, orange 0) bottom right, linear-gradient(45deg, transparent 10px, orange 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, orange 15px); }
+  .block--timetable--section--title span {
+    font-size: .6em;
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0 2px #000; }
+
+.block--timetable--section--entry {
+  text-decoration: none;
+  padding: 8px;
+  background-color: transparent;
+  transition: all 100ms; }
+  .block--timetable--section--entry:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .block--timetable--section--entry em, .block--timetable--section--entry span {
+    display: inline-block;
+    vertical-align: middle; }
+  .block--timetable--section--entry em {
+    font-style: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .block--timetable--section--entry span {
+    font-size: 0.6em;
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0 2px #000; }
 
 /*# sourceMappingURL=main.css.map */
