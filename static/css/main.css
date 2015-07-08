@@ -38,12 +38,9 @@ strong {
 
 body section[class^="block--"] {
   opacity: 0.1;
+  margin-bottom: 6em;
   transition: opacity 800ms; }
-body canvas {
-  opacity: 0.1;
-  transition: opacity 300ms; }
 
-body.ready canvas,
 body.ready section[class^="block--"] {
   opacity: 1; }
 
@@ -95,7 +92,8 @@ h2.block--title {
   font-family: 'Slackey', cursive;
   font-weight: 100;
   font-size: 2.4em;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-top: 10px solid rgba(255, 255, 255, 0.5); }
 
 .copyright {
   text-align: center;
@@ -437,9 +435,7 @@ h2.block--title {
 .block--directions--map {
   margin: 32px 0;
   padding: 16px 0;
-  line-height: 1;
-  border-top: 5px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 5px solid rgba(255, 255, 255, 0.5); }
+  line-height: 1; }
   .block--directions--map a {
     display: block;
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); }
