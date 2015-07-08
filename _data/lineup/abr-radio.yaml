@@ -1,9 +1,10 @@
 title: ABR Radio
-location: Nicosia, CY
+location: CY
 label:
 stage: ABR Radio
 date: 2015-08-22
 time: "18:00"
+priority: 2
 tags:
   - Live
   - Jazz

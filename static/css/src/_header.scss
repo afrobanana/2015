@@ -3,11 +3,11 @@
 
   h1 {
     font-family: 'Amatic SC', cursive;
-    font-size: 5em;
+    font-size: 7em;
     font-weight: 100;
     text-shadow: 0 3px 5px rgba(0,0,0,0.5);
     line-height: 1;
-    margin: ($gutter * 2) 0;
+    margin: ($gutter * 2) 0 ($gutter * 6) 0;
 
     a {
       color: inherit;

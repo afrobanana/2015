@@ -1,10 +1,10 @@
 {
-  "version": "0.1.4",
+  "version": "0.2.2",
   "name": "abr-2015",
   "title": "The Afro Banana Republic",
   "description": "The Afro Banana Republic (ABR)",
   "keywords": "alternative music festival cyprus",
-  "baseurl": "//2015.afrobanana.com",
+  "baseurl": "//2015.afrobananarepublic.com",
   "GoogleAnalytics": "UA-25314979-1",
   "build_dir": "_site",
   "serve_dir": ".serve",
@@ -31,6 +31,10 @@
       "default": {},
       "lineup": {
         "width": "344",
+        "height": "AUTO"
+      },
+      "location": {
+        "width": "300",
         "height": "AUTO"
       }
     }

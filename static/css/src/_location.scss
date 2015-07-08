@@ -1,2 +1,15 @@
 .block--location {}
-.block--location--photos {}
+.block--location--photos {
+  @include column($count: 3, $gap: 0);
+  list-style: none;
+}
+
+.block--location--photo {
+  @include column-content;
+  // height: 450px;
+  // overflow: hidden;
+  img {
+    height: 450px;
+    width: auto;
+  }
+}

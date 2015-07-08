@@ -205,13 +205,20 @@ module.exports = function(grunt) {
       generate: {
         options: {
           basePath: '<%= pkg.build_dir %>',
-          network: ['http://*', 'https://*'],
+          network: [
+            // 'https://fonts.googleapis.com/css?family=Amatic+SC',
+            // 'https://fonts.gstatic.com/s/amaticsc/v6/DPPfSFKxRTXvae2bKDzp5JBw1xU1rKptJj_0jans920.woff2',
+            // 'https://fonts.googleapis.com/css?family=Slackey',
+            // 'https://fonts.gstatic.com/s/slackey/v6/0MUhmNrdbF-OYk8JDhRKYQLUuEpTyoUstqEm5AMlJo4.woff2',
+            // 'http://*',
+            // 'https://*'
+          ],
           verbose: false,
           timestamp: true,
           hash: true,
         },
         src: [
-        // pages
+          // pages
           '**/*.html',
           // files
           '**/js/*.min.js',
@@ -281,7 +288,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
                      'config',
                      'shell:jekyllBuild',
-                     'manifest'
+                     // 'manifest'
   ]);
   grunt.registerTask('config', [
                      'convert:config',
@@ -301,6 +308,6 @@ module.exports = function(grunt) {
                      // 'newer:rev',
                      'usemin',
                      'htmlmin',
-                     'manifest',
+                     // 'manifest',
   ]);
 };

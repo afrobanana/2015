@@ -1,62 +1,29 @@
 {% assign page = site.data.lineup.lineup %}
-{% assign lineup = site.data.lineup | to_array %}
-{% assign lineup_dates = lineup | sort:"date" | group_by:"date"  %}
-
-
-<nav class="side-nav">
-<ol>
-{% for date_heading in lineup_dates %}
-  {% if date_heading.name != '' %}
-  <li class="side-nav--item">
-    <a href="#{{ date_heading.name }}" class="side-nav--text"><span>Day {% cycle 1, 2 %}</span>{{ date_heading.name | date_to_string }}</a>
-  </li>
-  {% endif %}
-{% endfor %}
-  <li class="side-nav--item">
-    <a href="#projects" class="side-nav--text">Projects</a>
-  </li>
-</ol>
-</nav>
+{% assign lineup = site.data.lineup | to_array | sort:"date" %}
+{% assign lineup_dates = lineup | group_by:"date"  %}
 
 
 {% for date in lineup_dates %}
 {% if date.name != '' %}
-<a id="{{ date.name }}" class="side-nav--target"></a>
+<a name="{{ date.name }}"></a>
 <section class="block--lineup">
   <header class="block--header">
-    <h2 class="block--title">{{ date.name | date_to_string }}</h2>
+    <h2 class="block--title">{{ date.name | date:"%d %B %Y" }}</h2>
   </header>
   <main class="block--main">
     <dl class="block--lineup--entries">
-        {% for entry in date.items %}
-          {% assign id = entry.id %}
-          {% if id != 'lineup' %}
-          <dd class="lineup-entry line-entry-{{ id }}">
-          {% include components/lineup/list-item.html id=id entry=entry %}
-          </dd>
-          {% endif %}
-        {% endfor %}
+      {% assign entries = date.items | sort:"priority" %}
+      {% for entry in entries %}
+        {% assign id = entry.id %}
+        {% if id != 'lineup' %}
+        <dd class="lineup-entry line-entry-{{ id }}" id="lineup--{{ entry.id }}">
+        {% include components/lineup/list-item.html id=id entry=entry %}
+        </dd>
+        {% endif %}
+      {% endfor %}
     </dl>
   </main>
 </section>
 {% endif %}
 {% endfor %}
 
-<a id="projects" class="side-nav--target"></a>
-<section class="block--lineup">
-  <header class="block--header">
-    <h2 class="block--title">Projects</h2>
-  </header>
-  <main class="block--main">
-    <dl class="block--lineup--entries">
-        {% for entry in lineup_dates[0].items %}
-          {% assign id = entry.id %}
-          {% if id != 'lineup' %}
-          <dd class="lineup-entry line-entry-{{ id }}">
-          {% include components/lineup/list-item.html id=id entry=entry %}
-          </dd>
-          {% endif %}
-        {% endfor %}
-    </dl>
-  </main>
-</section>

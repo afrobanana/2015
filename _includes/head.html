@@ -1,4 +1,5 @@
 {% assign title = page.title | append:' .:. ' | append: site.title | strip_newlines %}
+{% assign name = page.layout | remove:'.html' %}
 {% assign canonical = site.baseurl | append:page.url | remove:'index.html' %}
 {% assign images_url = site.baseurl | append:site.assets.images %}
 
@@ -8,7 +9,10 @@
 <!--[if IE 8 ]><html lang="en" xmlns:og="http://ogp.me/ns" class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" xmlns:og="http://ogp.me/ns" class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" xmlns:og="http://ogp.me/ns" class="no-js" manifest="manifest.appcache"><!--<![endif]-->
+<html lang="en"
+      xmlns:og="http://ogp.me/ns"
+      manifest="{{ site.baseurl }}/manifest.appcache"
+      class="no-js"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>{{ title }}</title>
@@ -38,8 +42,10 @@
   <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
-  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
   <!-- build:css {{ site.assets.css }}{{ site.name }}.min.css -->
   <link rel="stylesheet" href="{{ site.assets.css }}main.css">
   <!-- endbuild -->
@@ -49,6 +55,7 @@
   <script type="text/javascript" src="{{ site.assets.js }}background.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}navigation.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}main.js"></script>
+  <!-- endbuild -->
   <script type="text/javascript">
   // Check if a new cache is available on page load.
   window.addEventListener('load', function(e) {
@@ -64,6 +71,5 @@
     }, false);
   }, false);
   </script>
-  <!-- endbuild -->
 </head>
-<body>
+<body class="page--{{ name }}">

@@ -1,10 +1,10 @@
 $(function() {
-  $('.wrapper').scrollspy({
-    target: '.side-nav a'
-  });
-  $('.side-nav').sticky({
-    'parent': '.wrapper'
-  });
+  // $('.wrapper').scrollspy({
+  //   target: '.side-nav a'
+  // });
+  // $('.side-nav').sticky({
+  //   'parent': '.wrapper'
+  // });
 });
 
 

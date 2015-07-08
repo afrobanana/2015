@@ -76,29 +76,43 @@ $maxHeight: 212px;
     @extend %link;
   }
 }
-
-.lineup-entry-stage,
 .lineup-entry-label {
   font-size: 0.6em;
+}
+.lineup-entry-stage,
+.lineup-entry-date,
+.lineup-entry-time,
+.lineup-entry-session,
+.lineup-entry-label {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  padding: 0.2em 0.4em;
 
   &:empty {
     display: none;
   }
 }
-
+.lineup-entry-label {
+  padding: 0.2em 0.4em;
+}
 .lineup-entry-stage {
+  font-size: 0.8em;
   text-transform: uppercase;
   color: #333;
+    padding: 0.2em 0.4em;
+
   background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0 $gutter;
 }
 
 .lineup-entry-label {
   background-color: orange;
   color: #fff;
+}
+
+.lineup-entry-session {
+  padding: 0.2em 0.4em;
+  background-color: rgba(0,0,0,0.4);
 }
