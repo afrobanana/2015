@@ -23,5 +23,7 @@ function background(id) {
     ctx.fillStyle = "hsla("+randomHue+", 30%, 80%, ."+randomOpacityOne+randomOpacityTwo+")";
     ctx.fillRect(randomX, randomY, randomSize, randomSize);
   }
-
+  window.addEventListener('resize', function() {
+    requestAnimationFrame(background(id));
+  }, false, false);
 }
