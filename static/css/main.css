@@ -92,12 +92,23 @@ h2.block--title {
   font-family: 'Slackey', cursive;
   font-weight: 100;
   font-size: 2.4em;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  border-top: 10px solid rgba(255, 255, 255, 0.5); }
+  text-align: center;
+  text-shadow: 0 0 60px #CA8796;
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .copyright {
   text-align: center;
   font-size: 0.85em; }
+
+.page--home .copyright {
+  display: none; }
+
+.block--intro--flyer {
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block; }
 
 .wrapper-inner {
   max-width: 900px;
@@ -343,6 +354,31 @@ h2.block--title {
   .block--directions--map img {
     width: 100%;
     height: auto; }
+
+.block--location--photos {
+  -moz-column-count: 3;
+  -moz-column-gap: 0;
+  -moz-column-width: auto;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0;
+  -webkit-column-width: auto;
+  column-count: 3;
+  column-gap: 0;
+  column-width: auto;
+  vertical-align: top;
+  list-style: none; }
+
+.block--location--photo {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  display: inline-block;
+  width: 100%; }
+  .block--location--photo img {
+    height: 450px;
+    width: auto; }
 
 .block--volunteer--content {
   -moz-column-count: 2;
