@@ -296,6 +296,9 @@ h2.block--title {
   padding: 0.2em 0.4em;
   background-color: rgba(0, 0, 0, 0.4); }
 
+.lineup-entry-links {
+  margin-bottom: 16px; }
+
 .block--facilities--entries {
   -moz-column-count: 2;
   -moz-column-gap: 16px;
@@ -355,6 +358,10 @@ h2.block--title {
   .block--directions--map img {
     width: 100%;
     height: auto; }
+
+.block--directions--content strong {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px; }
 
 .block--location--photos {
   -moz-column-count: 3;
@@ -457,6 +464,8 @@ h2.block--title {
   text-align: center;
   transition: all 500ms;
   list-style: none; }
+  .block--timetable--sections ol {
+    list-style: none; }
 
 .block--timetable--section {
   -webkit-column-break-inside: avoid;
