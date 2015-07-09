@@ -37,7 +37,6 @@ strong {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
 
 body section[class^="block--"] {
-  padding-top: 32px;
   margin-bottom: 64px; }
 
 .wrapper {
@@ -85,12 +84,14 @@ h2.block--title {
   text-align: left;
   font-weight: 100;
   margin: 32px 0 16px 0;
-  font-family: 'Slackey', cursive;
+  font-family: 'Wallpoet', normal;
   font-weight: 100;
   font-size: 2.4em;
-  text-align: center;
-  text-shadow: 0 0 60px #CA8796;
-  background-color: rgba(255, 255, 255, 0.2); }
+  text-align: left;
+  color: #e5ba65;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 16px; }
 
 .copyright {
   text-align: center;
@@ -118,18 +119,13 @@ h2.block--title {
     font-weight: 100;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     line-height: 1;
-    margin: 32px 0 96px 0; }
+    margin: 32px 0; }
     .block--header h1 a {
       color: inherit;
       text-decoration: none; }
 
 .nav-global {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  text-transform: uppercase;
-  transition: all 500ms; }
+  margin-bottom: 32px; }
   .nav-global svg {
     vertical-align: middle; }
   .nav-global ol {
@@ -147,37 +143,37 @@ h2.block--title {
       right: 0; }
 
 .nav-item {
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 3.5em;
+  font-weight: 100;
+  position: absolute;
+  color: #f7f3a5;
+  font-weight: 100;
+  line-height: 1;
+  text-shadow: -6px 10px 20px #ef0e16;
   position: fixed;
-  z-index: 20;
+  z-index: 100;
   display: block;
   transform: translate3d(0, 0, 0);
-  font-size: 1.2em;
-  color: #fff;
-  padding: 8px 16px;
   text-decoration: none;
-  opacity: 0.7;
-  transition: all 250ms;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: orange; }
+  opacity: 0.8; }
+
+.nav-item {
+  transition: all 250ms; }
   .nav-item.is-active {
-    font-family: 'Lovers Quarrel', cursive;
-    font-size: 9em;
+    font-size: 6em;
     position: absolute;
-    color: #f7f3a5;
-    font-weight: 100;
-    line-height: 1;
-    text-shadow: -6px 10px 20px #ef0e16;
-    transform: translateX(-50%) translateY(45px) translate3d(0, 0, 0) rotate(-5deg);
+    transform: translateX(-50%) translateY(80px) translate3d(0, 0, 0) rotate(-5deg);
     left: 50%;
     top: 0;
     right: auto;
-    background: none !important;
-    box-shadow: none !important;
-    text-transform: none;
-    opacity: 1; }
-  .nav-item:hover {
     opacity: 1;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); }
+    width: auto;
+    height: auto; }
+    .nav-item.is-active span {
+      display: inline-block; }
+  .nav-item:hover {
+    opacity: 1; }
   .nav-item.nav-icon {
     padding: 0;
     background: none;
@@ -187,46 +183,46 @@ h2.block--title {
 .nav-item--info,
 .nav-item--festival,
 .nav-item--location {
-  top: 4em; }
+  top: 32px; }
 
 .nav-item--tickets {
   display: none;
-  top: 0.5em;
+  top: 32px;
   left: 45%; }
 
 .nav-item--location {
   right: auto;
-  left: 2em; }
+  left: 32px; }
 
 .nav-item--info,
 .nav-item--festival,
 .nav-item--twitter {
   left: auto;
-  right: 2em; }
+  right: 32px; }
 
 .nav-item--facebook {
-  right: 5em; }
+  right: 32px; }
 
 .nav-item--facebook,
 .nav-item--twitter {
-  bottom: 0.5em; }
+  bottom: 32px; }
 
 .page--info .nav-item--festival {
-  left: 2em;
+  left: 32px;
   right: auto; }
 .page--info .nav-item--location {
-  right: 2em;
+  right: 32px;
   left: auto; }
 
 .page--location .nav-item--info {
-  left: 2em;
+  left: 32px;
   right: auto; }
 
 .page--home .nav-item--info {
   left: 45%;
   right: auto;
   top: auto;
-  bottom: 2em; }
+  bottom: 32px; }
 
 .block--lineup--entries img {
   float: left;
@@ -252,10 +248,13 @@ h2.block--title {
   .lineup-entry-name a {
     color: #fff;
     text-decoration: none;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    display: block;
+    line-height: 1; }
 
 .lineup-entry-content {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  margin-top: 8px; }
 
 .lineup-entry-label {
   font-size: 0.6em; }
@@ -277,9 +276,6 @@ h2.block--title {
   .lineup-entry-label:empty {
     display: none; }
 
-.lineup-entry-label {
-  padding: 0.2em 0.4em; }
-
 .lineup-entry-stage {
   font-size: 0.8em;
   text-transform: uppercase;
@@ -289,8 +285,12 @@ h2.block--title {
   margin: 0 0 0 16px; }
 
 .lineup-entry-label {
-  background-color: orange;
-  color: #fff; }
+  padding: 0.2em 0.4em;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: -10px; }
 
 .lineup-entry-session {
   padding: 0.2em 0.4em;
@@ -528,7 +528,8 @@ h2.block--title {
   text-decoration: none;
   padding: 8px;
   background-color: transparent;
-  transition: all 100ms; }
+  transition: all 100ms;
+  text-align: left; }
   .block--timetable--section--entry:hover {
     background-color: rgba(0, 0, 0, 0.5); }
   .block--timetable--section--entry em, .block--timetable--section--entry span {
