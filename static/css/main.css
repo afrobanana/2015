@@ -37,12 +37,8 @@ strong {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
 
 body section[class^="block--"] {
-  opacity: 0.1;
-  margin-bottom: 6em;
-  transition: opacity 800ms; }
-
-body.ready section[class^="block--"] {
-  opacity: 1; }
+  padding-top: 32px;
+  margin-bottom: 64px; }
 
 .wrapper {
   padding-bottom: 5em; }
@@ -331,7 +327,8 @@ h2.block--title {
   column-count: 3;
   column-gap: 16px;
   column-width: auto;
-  vertical-align: top; }
+  vertical-align: top;
+  overflow: hidden; }
   .block--directions--content h3, .block--directions--content ol {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
@@ -341,6 +338,10 @@ h2.block--title {
     display: inline-block;
     width: 100%;
     display: block; }
+  .block--directions--content ol {
+    margin-bottom: 1em; }
+  .block--directions--content h3 {
+    -webkit-column-break-before: always; }
 
 .block--directions--map {
   margin: 32px 0;
@@ -532,10 +533,8 @@ h2.block--title {
     white-space: nowrap; }
   .block--timetable--section--entry span {
     font-size: 0.6em;
-    display: block;
     text-transform: uppercase;
-    text-align: left;
-    color: #fff;
-    text-shadow: 0 0 2px #000; }
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px; }
 
 /*# sourceMappingURL=main.css.map */

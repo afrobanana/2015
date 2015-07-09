@@ -100,15 +100,9 @@
     white-space: nowrap;
   }
   span {
-    // font-size: 0.8em;
-    // color: rgba(255,255,255,.5);
-  }
-  span {
     font-size: 0.6em;
-    display: block;
     text-transform: uppercase;
-    text-align: left;
-    color: #fff;
-    text-shadow: 0 0 2px #000;
+    color: rgba(255,255,255, 0.7);
+    letter-spacing: 1px;
   }
 }

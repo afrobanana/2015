@@ -1,14 +1,17 @@
 title: Radio Pangea
+type: Live
 location: CY
 label: Music Unites The World
 stage: Up the Hill
 date: 2015-08-22
-time: "18:00"
+priority: 12
 tags:
-  - Live
-  - Jazz
+  - Gypsy Punk
+  - Balkan Beats
+  - Anatolian Grooves
+  - African-Reggae
 links:
-  - Facebook: https://www.facebook.com/ABR
+  - YouTubeUserId: RadioPangea
 content: |
   Radio Pangea (Barçın Gökbörü) believes that the most effective way of fighting against cultural conflict and contemptuous attitudes towards our differences lies in music.
 

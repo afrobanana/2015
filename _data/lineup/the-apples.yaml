@@ -1,14 +1,16 @@
 title: The Apples
-location: GR
-label: ABR
+type: live
+location: IL
+label:
 stage: In the Woods
 date: 2015-08-22
-time: "18:30"
+priority: 0
 tags:
-  - Live
-  - Jazz
+  - Instrumental
+  - Post Funk
 links:
-  - Facebook: https://www.facebook.com/ABR
+  - Facebook:
+  - YouTubeId: K4De0mlmrPM
 content: |
   This Israeli instrumental post-funk band have been delivering genre melting infectious grooves for over a decade and they sure know how to do it with exceptional artistry and brilliance.
 

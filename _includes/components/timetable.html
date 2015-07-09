@@ -9,12 +9,18 @@
         <li class="block--timetable--section">
           <a href="#{{ date_heading.name }}" class="block--timetable--section--title"><span>{{ date_heading.name | date: "%A" }}</span> {{ date_heading.name | date_to_string }}</a>
           <ol>
-            {% for entry in date_heading.items %}
+            {% assign entries = date_heading.items | sort:"priority" %}
+            {% for entry in entries %}
               {% assign id = entry.id %}
               {% if id != 'lineup' %}
               <li>
               <a href="#lineup--{{ id }}" title="{{ entry.title }}" class="block--timetable--section--entry"><em>{{ entry.title }}</em>
-                <!-- <span>{{ entry.location }}</span> -->
+                {% if entry.type == 'live' %}
+                <span class="block--timetable--section--entry--type">{{ entry.type }}</span>
+                {% endif %}
+                {% if entry.location != 'CY' %}
+                <span class="block--timetable--section--entry--location">{{ entry.location }}</span>
+                {% endif %}
               </a>
               </li>
               {% endif %}

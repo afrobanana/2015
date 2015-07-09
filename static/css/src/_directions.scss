@@ -1,14 +1,19 @@
 .block--directions--content {
   @extend %block--text;
-
   @include column(3);
+
+  overflow: hidden;
 
   h3, ol {
     @include column-content;
+
     display: block;
   }
+  ol {
+    margin-bottom: 1em;
+  }
   h3 {
-    // -webkit-column-break-before:always;
+    -webkit-column-break-before:always;
   }
 }
 
