@@ -132,7 +132,7 @@ if (typeof jQuery === 'undefined') {
       this.selector + '[href="' + target + '"]'
 
     var active = $(selector)
-      // .parents('li')
+      .parents('li')
       .addClass('active')
 
     if (active.parent('.dropdown-menu').length) {
@@ -146,7 +146,7 @@ if (typeof jQuery === 'undefined') {
 
   ScrollSpy.prototype.clear = function () {
     $(this.selector)
-      // .parentsUntil(this.options.target, '.active')
+      .parentsUntil(this.options.target, '.active')
       .removeClass('active')
   }
 

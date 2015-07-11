@@ -1,10 +1,12 @@
 $(function() {
-  // $('.wrapper').scrollspy({
-  //   target: '.side-nav a'
-  // });
-  // $('.side-nav').sticky({
-  //   'parent': '.wrapper'
-  // });
+  $('body').scrollspy({
+    target: '.menu a',
+    offset: 40
+  });
+  $('.menu').sticky({
+    'parent': window
+  });
+
 });
 
 

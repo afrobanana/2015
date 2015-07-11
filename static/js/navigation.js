@@ -29,9 +29,10 @@
         });
       }
       if (!$el.data('clone') && method === 'addClass') {
-        var clone = $('<div/>').css({
-          height: $el[0].offsetHeight
-        });
+        var clone = $el.clone()
+        // .css({
+        //   height: $el[0].offsetHeight
+        // });
         clone.insertAfter($el).css({
           'visibility': 'hidden'
         });
