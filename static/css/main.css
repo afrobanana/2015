@@ -37,9 +37,6 @@ strong {
   text-decoration: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
 
-body section[class^="block--"] {
-  margin-bottom: 64px; }
-
 .wrapper {
   padding-bottom: 5em; }
   .wrapper:before {
@@ -64,6 +61,9 @@ body section[class^="block--"] {
     transform: translate3d(0, 0, 0); }
 
 .wrapper-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
   z-index: 2; }
 
 #sky,
@@ -88,7 +88,9 @@ body section[class^="block--"] {
 
 #beams {
   position: absolute;
-  z-index: 0; }
+  z-index: 0;
+  top: -40px;
+  left: -50px; }
   #beams svg {
     width: 50%;
     margin: 0 auto;
@@ -99,33 +101,7 @@ body section[class^="block--"] {
   text-align: center;
   font-size: 0.85em; }
 
-.page--home .copyright {
-  display: none; }
-
-.block--intro--flyer {
-  text-align: center;
-  position: relative; }
-  .block--intro--flyer img {
-    height: 600px;
-    position: relative;
-    z-index: 1; }
-
-.wrapper-inner {
-  max-width: 980px;
-  margin: 0 auto; }
-
-.block--header h1 {
-  display: none;
-  font-family: 'Amatic SC', cursive;
-  font-size: 7em;
-  font-weight: 100;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-  line-height: 1;
-  margin: 32px 0; }
-  .block--header h1 a {
-    color: inherit;
-    text-decoration: none; }
-.block--header h2.block--title {
+.block--header .block--title {
   text-align: left;
   font-weight: 100;
   margin: 80px 0 16px 0;
@@ -137,81 +113,60 @@ body section[class^="block--"] {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-transform: uppercase; }
 
-.nav-global {
-  margin-bottom: 32px; }
-  .nav-global svg {
-    vertical-align: middle; }
-  .nav-global ol {
-    list-style: none; }
-  .nav-global li {
-    display: inline-block;
-    vertical-align: bottom; }
-    .nav-global li.aux {
-      float: right; }
-    .nav-global li ol {
-      position: absolute;
-      bottom: 2.4em;
-      background-color: rgba(0, 0, 0, 0.4);
-      left: 0;
-      right: 0; }
-
-.nav-item, .page--single .page--title {
-  font-family: 'Lovers Quarrel', cursive;
-  font-size: 3.5em;
-  font-weight: 100;
-  position: absolute;
-  color: #f7f3a5;
-  font-weight: 100;
-  line-height: 1;
-  text-shadow: -6px 10px 20px #ef0e16;
-  position: fixed;
-  z-index: 100;
-  display: block;
+.menu {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 200ms;
   transform: translate3d(0, 0, 0);
-  text-decoration: none;
-  opacity: 0.8; }
-
-.nav-item {
-  transition: all 250ms; }
-  .nav-item.is-active {
-    font-size: 6em;
+  position: relative;
+  z-index: 1000;
+  width: 980px; }
+  .menu.is-sticky {
+    position: fixed;
+    top: 8px;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .menu li ul {
+    transition: all 200ms;
+    display: none;
     position: absolute;
-    transform: translateX(-50%) translateY(80px) translate3d(0, 0, 0) rotate(-5deg);
-    left: 50%;
-    top: 0;
-    right: auto;
-    opacity: 1;
-    width: auto;
-    height: auto; }
-    .nav-item.is-active span {
-      display: inline-block; }
-  .nav-item:hover {
-    opacity: 1; }
-  .nav-item.nav-icon {
+    width: 100%;
+    left: 0;
+    top: 0; }
+  .menu > ol {
+    margin: 0;
     padding: 0;
-    background: none;
-    box-shadow: none;
-    margin: 0 16px; }
+    overflow: hidden; }
+  .menu svg, .menu li {
+    display: inline-block;
+    vertical-align: middle; }
+  .menu .aux {
+    position: absolute;
+    width: auto;
+    text-align: center; }
+  .menu .active > ul {
+    top: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .menu .active > .menu--item {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .menu .active > .menu--item--sub {
+    background-color: rgba(255, 255, 255, 0.3); }
 
-.nav-item--info,
-.nav-item--festival,
-.nav-item--location {
-  top: 32px; }
+.menu--item {
+  padding: 0.8em 2em;
+  display: block;
+  box-sizing: border-box;
+  transition: all 200ms; }
 
-.nav-item--tickets {
-  display: none;
-  top: 32px;
-  left: 45%; }
+.menu--item,
+.menu--item--sub {
+  text-decoration: none; }
 
-.nav-item--location {
-  right: auto;
-  left: 32px; }
-
-.nav-item--info,
-.nav-item--festival,
-.nav-item--twitter {
-  left: auto;
-  right: 32px; }
+.menu--item--sub {
+  padding: 0.4em 1em;
+  display: block; }
 
 .menu--item--facebook,
 .menu--item--twitter {
@@ -221,116 +176,13 @@ body section[class^="block--"] {
 .menu--item--facebook {
   bottom: -50px; }
 
-.nav-item span {
-  display: none; }
-
-.page--home h1.block--title {
-  display: none; }
-
-.nav-item--festival {
-  background: url("/static/images/navigation/festival.png") no-repeat;
-  background-size: contain;
-  padding: 0;
-  box-shadow: none;
-  width: 7em;
-  height: 5em;
-  line-height: 1;
-  transform: translate3d(0, 0, 0) translateX(-50%);
-  top: 50%;
-  left: 49.6%;
-  right: auto; }
-
-.nav-item--info {
-  background: url("/static/images/navigation/ticket.png") no-repeat;
-  background-size: contain;
-  padding: 0;
-  box-shadow: none;
-  width: 4em;
-  height: 3.5em;
-  line-height: 1;
-  transform: translate3d(0, 0, 0); }
-
-.page--info .nav-item--festival {
-  left: 32px;
-  right: auto; }
-.page--info .nav-item--location {
-  right: 32px;
-  left: auto; }
-
-.page--location .nav-item--info {
-  left: 32px;
-  right: auto; }
-
-.page--home .nav-item--info {
-  left: 45%;
-  right: auto;
-  top: auto;
-  bottom: 32px; }
-
-.page--single .page--header {
-  display: none; }
-.page--single .menu {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+.block--intro--flyer {
   text-align: center;
-  box-shadow: 0 0 30px #5b7686;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 200ms;
-  transform: translate3d(0, 0, 0);
-  position: relative;
-  z-index: 1000;
-  width: 980px; }
-  .page--single .menu.is-sticky, .page--single .menu.affix {
-    position: fixed;
-    top: 8px; }
-    .page--single .menu.is-sticky .menu--item, .page--single .menu.affix .menu--item {
-      padding: 0.4em 1em; }
-  .page--single .menu li ul {
-    display: none;
-    position: absolute;
-    width: 100%;
-    left: 0; }
-  .page--single .menu > ol {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; }
-    .page--single .menu > ol > li {
-      width: 25%;
-      float: left; }
-  .page--single .menu svg, .page--single .menu li {
-    display: inline-block;
-    vertical-align: middle; }
-  .page--single .menu .aux {
-    position: absolute;
-    width: auto;
-    text-align: center; }
-  .page--single .menu .active > ul {
-    display: block;
-    background-color: #023f50; }
-  .page--single .menu .active > .menu--item {
-    background-color: #023f50; }
-  .page--single .menu .active > .menu--item--sub {
-    background-color: rgba(0, 0, 0, 0.3); }
-.page--single .menu--item {
-  padding: 0.8em 1em;
-  display: block;
-  box-sizing: border-box;
-  transition: all 200ms; }
-.page--single .menu--item,
-.page--single .menu--item--sub {
-  text-decoration: none; }
-.page--single .menu--item--sub {
-  padding: 0.4em 2em;
-  display: block; }
-
-.page--single .page--title {
-  transition: all 250ms;
-  font-size: 6em;
-  transform: translateX(-50%) translateY(80px) translate3d(0, 0, 0) rotate(-5deg);
-  left: 50%;
-  top: 0; }
-  .page--single .page--title span {
-    display: inline-block; }
+  position: relative; }
+  .block--intro--flyer img {
+    height: 600px;
+    position: relative;
+    z-index: 1; }
 
 .block--lineup--entries img {
   float: left;
@@ -407,26 +259,8 @@ body section[class^="block--"] {
 .lineup-entry-links {
   margin-bottom: 16px; }
 
-.block--facilities--entries {
-  -moz-column-count: 2;
-  -moz-column-gap: 16px;
-  -moz-column-width: auto;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 16px;
-  -webkit-column-width: auto;
-  column-count: 2;
-  column-gap: 16px;
-  column-width: auto;
-  vertical-align: top; }
-
-.block--facilities--entry {
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  -o-column-break-inside: avoid;
-  -ms-column-break-inside: avoid;
-  column-break-inside: avoid;
-  display: inline-block;
-  width: 100%; }
+.block--directions .block--header {
+  display: none; }
 
 .block--directions--content {
   -moz-column-count: 3;
@@ -439,7 +273,8 @@ body section[class^="block--"] {
   column-gap: 16px;
   column-width: auto;
   vertical-align: top;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 10px solid rgba(255, 255, 255, 0.5); }
   .block--directions--content h3, .block--directions--content ol {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
@@ -470,6 +305,30 @@ body section[class^="block--"] {
 .block--directions--content strong {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px; }
+
+.block--facilities .block--header {
+  display: none; }
+
+.block--facilities--entries {
+  -moz-column-count: 2;
+  -moz-column-gap: 16px;
+  -moz-column-width: auto;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 16px;
+  -webkit-column-width: auto;
+  column-count: 2;
+  column-gap: 16px;
+  column-width: auto;
+  vertical-align: top; }
+
+.block--facilities--entry {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  display: inline-block;
+  width: 100%; }
 
 .block--volunteer--content {
   -moz-column-count: 2;
@@ -532,7 +391,7 @@ body section[class^="block--"] {
   display: inline-block;
   width: 100%; }
 
-#festival--timetable {
+.block--timetable {
   position: absolute;
   top: 160px;
   width: 980px;
@@ -584,48 +443,6 @@ body section[class^="block--"] {
   display: inline-block;
   margin-bottom: 8px; }
 
-.block--timetable--section--titlex {
-  color: #111;
-  font-family: Slackey,cursive;
-  font-weight: 100;
-  text-align: center;
-  display: inline-block;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  padding: .5em .5em .5em 2em;
-  font-size: 1.6em;
-  white-space: nowrap;
-  position: relative;
-  background: linear-gradient(135deg, transparent 10px, #e5ba65 0) top left, linear-gradient(225deg, transparent 10px, #e5ba65 0) top right, linear-gradient(315deg, transparent 10px, #e5ba65 0) bottom right, linear-gradient(45deg, transparent 10px, #e5ba65 0) bottom left;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px);
-  transition: all 500ms; }
-  .block--timetable--section--titlex:before {
-    content: " ";
-    background-color: #3c7083;
-    height: 1em;
-    width: 1em;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    border-radius: 100%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-    transform: translateY(-50%) translateX(50%); }
-  .block--timetable--section--titlex:hover {
-    background: linear-gradient(135deg, transparent 10px, orange 0) top left, linear-gradient(225deg, transparent 10px, orange 0) top right, linear-gradient(315deg, transparent 10px, orange 0) bottom right, linear-gradient(45deg, transparent 10px, orange 0) bottom left;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, orange 15px); }
-  .block--timetable--section--titlex span {
-    font-size: .6em;
-    display: block;
-    text-transform: uppercase;
-    text-align: left;
-    color: #fff;
-    text-shadow: 0 0 2px #000; }
-
 .block--timetable--section--entry {
   text-decoration: none;
   padding: 8px;
@@ -648,5 +465,29 @@ body section[class^="block--"] {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 1px; }
+
+.block--sponsors .block--header {
+  display: none; }
+
+.page--header {
+  display: none;
+  padding-top: 48px; }
+
+.page--title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 7em;
+  font-weight: 100;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  margin: 32px 0; }
+  .page--title a {
+    color: inherit;
+    text-decoration: none; }
+
+.page--tickets .page--header {
+  display: block; }
+
+.page--location .page--header {
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */

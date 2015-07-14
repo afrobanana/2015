@@ -34,13 +34,6 @@ strong {
 @import "mixins";
 @import "typography";
 @import "theme";
-@import "layout";
-@import "header";
-@import "nav";
-@import "lineup";
-@import "facilities";
-@import "directions";
-@import "location";
-@import "volunteer";
-@import "credits";
-@import "timetable";
+
+@import "components/components";
+@import "pages/pages";
