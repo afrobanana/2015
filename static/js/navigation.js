@@ -6,7 +6,8 @@
 
     elements.push({
       $el: el,
-      parent: parent
+      parent: parent,
+      offset: null
     });
 
     $(parent).off('scroll.sticky').on('scroll.sticky', function(e) {
@@ -16,30 +17,13 @@
   }
 
   function checkScroll() {
-    elements.forEach(function(nav) {
-      var $el = nav.$el,
-          top = $(nav.parent).scrollTop(),
+    elements.forEach(function(element) {
+      var $el = element.$el,
+          top = $(element.parent).scrollTop(),
           height = $el[0].offsetHeight,
-          offset_orig = $el.data('sticky') ? $el.data('sticky').offset : null,
           offset = $el.offset().top,
-          method = top <= (offset_orig) || (offset && (offset + height >= 0)) ? 'removeClass' : 'addClass';
-      if (offset_orig == null) {
-        $el.data('sticky', {
-          offset: top + offset - height
-        });
-      }
-      if (!$el.data('clone') && method === 'addClass') {
-        var clone = $('<div/>').css({
-          height: $el[0].offsetHeight
-        });
-        clone.insertAfter($el).css({
-          'visibility': 'hidden'
-        });
-        $el.data('clone', clone);
-      } else if ($el.data('clone') && method === 'removeClass') {
-        $el.data('clone').remove();
-        $el.data('clone', null);
-      }
+          offset_orig = element.offset = element.offset || offset,
+          method = top < (offset_orig)  ? 'removeClass' : 'addClass';
       $el[method]('is-sticky');
       console.log(method, offset_orig, offset, height, top);
     });

@@ -1,0 +1,10 @@
+.block--intro--flyer {
+  text-align: center;
+  position: relative;
+  margin-bottom: ($gutter * 3);
+  img {
+    height: 600px;
+    position: relative;
+    z-index: 1;
+  }
+}

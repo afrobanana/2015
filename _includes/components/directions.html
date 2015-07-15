@@ -1,0 +1,14 @@
+{% assign page = site.data.location.location %}
+<section class="block--directions">
+  <header class="block--header">
+    <h2 class="block--title">Directions</h2>
+  </header>
+  <main class="block--main">
+    <div class="block--directions--map">
+      <a href="https://goo.gl/maps/SWbdU" target="_blank" title="Google Map">{% image 900xAUTO map.jpg %}</a>
+    </div>
+    <div class="block--directions--content">
+      {{ page.content | markdownify }}
+    </div>
+  </main>
+</section>

@@ -1,0 +1,19 @@
+{% assign facilities = site.data.location | to_array | sort:"priority" %}
+<section class="block--facilities">
+  <header class="block--header">
+    <h2 class="block--title">Facilities</h2>
+  </header>
+  <main class="block--main block--facilities">
+    <div class="block--facilities--entries">
+      {% for entry in facilities %}
+        {% assign id = entry.id %}
+        {% if id != 'location' %}
+        <dl class="block--facilities--entry">
+          <dt class="block--facilities--entry--title">{{ entry.title }}</dt>
+          <dd class="block--facilities--entry--content">{{ entry.content | markdownify }}</dd>
+        </dl>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main>
+</section>

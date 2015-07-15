@@ -1,13 +1,12 @@
 {% assign lineup = site.data.lineup | to_array | sort:"date" %}
 {% assign lineup_dates = lineup | group_by:"date"  %}
 <section class="block--timetable">
-  <header class="block--header"></header>
   <main class="block--main">
     <ol class="block--timetable--sections">
       {% for date_heading in lineup_dates %}
         {% if date_heading.name != '' %}
         <li class="block--timetable--section">
-          <a href="#{{ date_heading.name }}" class="block--timetable--section--title"><span>{{ date_heading.name | date: "%A" }}</span> {{ date_heading.name | date_to_string }}</a>
+          <a href="#{{ date_heading.name }}" class="block--timetable--section--title"><span>{{ date_heading.name | date: "%A" }}</span> {{ date_heading.name | date:"%d %b" }}</a>
           <ol>
             {% assign entries = date_heading.items | sort:"priority" %}
             {% for entry in entries %}
@@ -29,15 +28,6 @@
         </li>
         {% endif %}
       {% endfor %}
-        <li class="block--timetable--section">
-          <a href="#projects" class="block--timetable--section--title"><span>Weekend</span>Projects</a>
-          <ol>
-            <li><a href="#" class="block--timetable--section--entry"><em>Lorem ipsum dolor sit amet</em></a></li>
-            <li><a href="#" class="block--timetable--section--entry"><em>consectetur adipisicing elit, sed do eiusmod</em></a></li>
-            <li><a href="#" class="block--timetable--section--entry"><em>tempor incididunt ut labore</em></a></li>
-            <li><a href="#" class="block--timetable--section--entry"><em>et dolore magna aliqua. Ut enim ad minim veniam</em></a></li>
-          </ol>
-        </li>
     </ol>
   </main>
 </section>

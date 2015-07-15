@@ -1,0 +1,16 @@
+.block--volunteer {
+  .block--header {
+    display: none;
+  }
+}
+.block--volunteer--content {
+  @extend %block--text;
+
+  @include column(2);
+
+  p {
+    @include column-content;
+  }
+  h3 {
+  }
+}

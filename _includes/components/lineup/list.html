@@ -5,10 +5,9 @@
 
 {% for date in lineup_dates %}
 {% if date.name != '' %}
-<a name="{{ date.name }}"></a>
-<section class="block--lineup">
+<section class="block--lineup" id="festival--{{ date.name }}">
   <header class="block--header">
-    <h2 class="block--title">{{ date.name | date:"%d %B %Y" }}</h2>
+    <h2 class="block--title">{{ date.name | date:"%d %B" }}</h2>
   </header>
   <main class="block--main">
     <dl class="block--lineup--entries">

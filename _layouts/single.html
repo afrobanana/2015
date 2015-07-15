@@ -1,0 +1,97 @@
+{% include head.html  %}
+
+<div class="wrapper">
+  <div class="wrapper-inner">
+    <section id="intro">
+      {% include components/intro.html  %}
+    </section>
+
+    {% include components/navigation-single.html  %}
+
+    <section class="page page--festival" id="festival">
+      <header class="page--header">
+        <h1 class="page--title">Festival</h1>
+      </header>
+
+      <div id="festival--timetable">
+        {% include components/timetable.html %}
+      </div>
+
+      <div id="festival--lineup">
+        {% include components/lineup/list.html %}
+      </div>
+
+      <div id="festival--projects" style="display:none;">
+        {% assign lineup = site.data.lineup | to_array | sort:"date" %}
+        {% assign lineup_dates = lineup | group_by:"date"  %}
+        <section class="block--projects">
+          <header class="block--header">
+            <h2 class="block--title">Projects</h2>
+          </header>
+          <main class="block--main">
+            <dl class="block--projects--entries">
+                {% for entry in lineup_dates[0].items %}
+                  {% assign id = entry.id %}
+                  {% if id != 'lineup' %}
+                  <dd class="projects-entry" id="projects--{{ id }}">
+                  {% include components/lineup/list-item.html id=id entry=entry %}
+                  </dd>
+                  {% endif %}
+                {% endfor %}
+            </dl>
+          </main>
+        </section>
+      </div>
+    </section>
+
+    {% assign location = site.data.location.location %}
+    <section class="page page--location" id="location">
+      <header class="page--header">
+        <h1 class="page--title">{{ location.title }}</h1>
+      </header>
+      <!-- <div id="location--photos">
+        {% image 980xAUTO location/location.jpg %}
+      </div>
+       --><div id="location--directions">
+        {% include components/directions.html %}
+      </div>
+      <div id="location--facilities">
+        <!-- <div id="location--photos"> -->
+          {% image 980xAUTO location/location.jpg %}
+        <!-- </div>       -->
+        {% include components/facilities.html %}
+      </div>
+    </section>
+
+    <section class="page page--tickets" id="tickets">
+      <header class="page--header">
+        <h1 class="page--title">Tickets</h1>
+      </header>
+      {% include components/tickets.html %}
+    </section>
+
+    <section class="page page--info" id="info">
+      <header class="page--header">
+        <h1 class="page--title">Info</h1>
+      </header>
+      <div id="info--production">
+        {% include components/credits.html %}
+      </div>
+      <div id="info--volunteer">
+        {% include components/volunteer.html %}
+      </div>
+    </section>
+
+    <section class="page page--sponsors" id="sponsors">
+      <header class="page--header">
+        <h1 class="page--title">Sponsors</h1>
+      </header>
+      <div id="info--sponsors">
+        {% include components/sponsors.html %}
+      </div>
+    </section>
+
+    {% include footer.html %}
+  </div>
+</div>
+{% include end.html %}

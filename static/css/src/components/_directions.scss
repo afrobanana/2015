@@ -1,0 +1,46 @@
+.block--directions {
+  .block--header {
+    display: none;
+  }
+}
+.block--directions--content {
+  @extend %block--text;
+  @include column(3);
+
+  overflow: hidden;
+  border-bottom: 10px solid rgba(255,255,255,0.5);
+
+  h3, ol {
+    @include column-content;
+
+    display: block;
+  }
+  ol {
+    margin-bottom: 1em;
+  }
+  h3 {
+    -webkit-column-break-before:always;
+  }
+}
+.block--directions--map {
+  margin: ($gutter * 2) 0;
+  padding: $gutter 0;
+  line-height: 1;
+
+  a {
+    display: block;
+    box-shadow: 0 0 40px rgba(255,255,255,0.5);
+    span {
+      display: none;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.block--directions--content strong {
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+}

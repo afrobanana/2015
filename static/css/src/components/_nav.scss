@@ -1,0 +1,114 @@
+.menu {
+  // bottom
+
+  &.is-sticky {
+    position: fixed;
+    top: $gutter / 2;
+    // background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    .menu--item {
+      // padding: 0.4em 2em;
+    }
+  }
+
+  font-family: 'Roboto', sans-serif;
+  // font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  // box-shadow: 0 0 30px rgba(91, 118, 134, 1);
+  background-color: rgba(0,0,0,0.2);
+
+  transition: all 200ms;
+  transform: translate3d(0, 0, 0);
+
+  position: relative;
+  z-index: 1000;
+  max-width: 980px;
+  width: 100%;
+  top: 0;
+
+  li {
+    ul {
+      visibility: hidden;
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(0,0,0,0);
+      transition: all 200ms;
+      opacity: 0.1;
+    }
+  }
+
+  > ol {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 200ms;
+
+    > li {
+      // width: 25%;
+      // float: left;
+      // display: inline-block;
+    }
+  }
+  svg, li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .aux {
+    position: absolute;
+    width: auto;
+    text-align: center;
+  }
+
+  .active {
+    > ul {
+      top: 100%;
+      visibility: visible;
+      z-index: 1;
+      opacity: 1;
+      // background-color: rgba(2, 63, 80, 1);
+      background-color: rgba(0,0,0,0.8);
+    }
+    > .menu--item {
+      // background-color: rgba(2, 63, 80, 1);
+      // background-color: rgba(255,255,255,0.1);
+      // background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0, 0.8);
+
+    }
+    > .menu--item--sub {
+      // background-color: rgba(255,255,255,.3);
+      // background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(73, 116, 133, 0.5);
+    }
+  }
+}
+.menu--item {
+  padding: 0.8em 2em;
+  box-sizing: border-box;
+  transition: all 200ms;
+}
+.menu--item,
+.menu--item--sub {
+  display: block;
+  text-decoration: none;
+}
+.menu--item--sub {
+  padding: 0.4em 1em;
+  display: block;
+}
+
+.menu--item--facebook,
+.menu--item--twitter {
+  // bottom: ($gutter * 2);
+  position: fixed;
+  right: -80px;
+}
+.menu--item--facebook {
+  // right: ($gutter * 2);
+  bottom: -50px;
+}

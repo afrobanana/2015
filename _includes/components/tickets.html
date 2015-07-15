@@ -1,10 +1,35 @@
 {% assign page = site.data.tickets %}
-<a id="tickets" class="side-nav--target"></a>
 <section class="block--tickets">
-  <header class="block--header">
-    <h2 class="block--title">{{ page.title }}</h2>
-  </header>
   <main class="block--main">
+    <div class="block--tickets--purchase">
+      <dl class="block--tickets--purchase--item">
+        <dt class="block--tickets--purchase--title"><span>Single Day</span> 21<sup>st</sup> August</dt>
+        <dd class="block--tickets--purchase--content">
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€15</span> Purchase</a>
+        </dd>
+      </dl>
+      <dl class="block--tickets--purchase--item block--tickets--purchase--item--two-days">
+        <dt class="block--tickets--purchase--title"><span>Two Days</span> 21 &amp; 22 August</dt>
+        <dd class="block--tickets--purchase--content">
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€20</span> Purchase</a>
+        </dd>
+      </dl>
+      <dl class="block--tickets--purchase--item">
+        <dt class="block--tickets--purchase--title"><span>Single Day</span> 22<sup>st</sup> August</dt>
+        <dd class="block--tickets--purchase--content">
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <p>dasd dadasd</p>
+          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€15</span> Purchase</a>
+        </dd>
+      </dl>
+    </div>
     <div class="block--tickets--content">
       {{ page.content | markdownify }}
     </div>

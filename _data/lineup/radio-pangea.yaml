@@ -1,5 +1,5 @@
 title: Radio Pangea
-type: Live
+type: live
 location: CY
 label: Music Unites The World
 stage: Up the Hill
@@ -11,7 +11,7 @@ tags:
   - Anatolian Grooves
   - African-Reggae
 links:
-  - YouTubeUserId: RadioPangea
+  YouTube: https://www.youtube.com/user/RadioPangea
 content: |
   Radio Pangea (Barçın Gökbörü) believes that the most effective way of fighting against cultural conflict and contemptuous attitudes towards our differences lies in music.
 

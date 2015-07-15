@@ -1,0 +1,74 @@
+.block--timetable {
+  position: absolute;
+  top: 160px;
+  max-width: 980px;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.block--timetable--sections {
+  @include column(2);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  transition: all 500ms;
+  list-style: none;
+
+  ol {
+    list-style: none;
+  }
+}
+.block--timetable--section {
+  @include column-content;
+  &:last-child {
+    text-align: right;
+  }
+  position: relative;
+  margin: $gutter 0;
+  font-size: 1em;
+
+  li {
+    margin: ($gutter/2) 0;
+    font-size: 1em;
+  }
+}
+.block--timetable--section--title {
+  text-decoration: none;
+  padding: $gutter / 2;
+  font-weight: 900;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  letter-spacing: 1px;
+  color: rgb(235, 188, 92);
+  display: inline-block;
+  margin-bottom: $gutter/2;
+}
+.block--timetable--section--entry {
+  text-decoration: none;
+  padding: $gutter / 2;
+  background-color: rgba(0,0,0,0);
+  transition: all 100ms;
+  text-align: left;
+
+  &:hover {
+    background-color: rgba(0,0,0,.5);
+  }
+
+  em, span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  em {
+    font-style: normal;
+
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  span {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    color: rgba(255,255,255, 0.7);
+    letter-spacing: 1px;
+  }
+}

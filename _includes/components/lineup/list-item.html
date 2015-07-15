@@ -1,5 +1,6 @@
+<div class="lineup-entry-image">{% image lineup lineup/{{ id }}.jpg %}</div>
 <h3 class="lineup-entry-name">
-  <a>{% image lineup lineup/{{ id }}.jpg %}{{ entry.title }}</a>
+  <a>{{ entry.title }}</a>
   {% for tag in entry.tags %}
   <em class="lineup-entry-label">{{ tag }}</em>
   {% endfor %}
@@ -7,8 +8,15 @@
 <div class="lineup-entry-content">
   {{ entry.content | markdownify }}
 </div>
-<div class="lineup-entry-session">
-  <span class="lineup-entry-date">{{ entry.date | date:"%A" }}</span>
-  <span class="lineup-entry-time">{{ entry.time }}</span>
-  <span class="lineup-entry-stage">{{ entry.stage }}</span>
+<div class="lineup-entry-links">
+  {% for link in entry.links %}
+    <a href="{{ link[1] }}" target="_blank" title="{{ link[0] }}" class="lineup-entry-link lineup-entry-link--{{ link[0] | downcase }}">{{ link[0] }}</a>
+  {% endfor %}
+</div>
+<div class="lineup-entry-sessions">
+  <div class="lineup-entry-session">
+    <span class="lineup-entry-date">{{ entry.date | date:"%A" }}</span>
+    <span class="lineup-entry-time">{{ entry.time }}</span>
+    <span class="lineup-entry-stage">{{ entry.stage }}</span>
+  </div>
 </div>
