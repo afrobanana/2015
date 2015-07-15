@@ -1,13 +1,14 @@
 $(function() {
   $('body').scrollspy({
     target: '.menu a',
-    offset: 40
+    offset: 100
   });
   $('.menu').sticky();
 
   $('.menu').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
-    duration: 800
+    duration: 800,
+    offset: -50
   });
   $('.block--timetable').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
