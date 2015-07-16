@@ -1,19 +1,19 @@
 $(function() {
   $('body').scrollspy({
     target: '.menu a',
-    offset: 100
+    offset: 50
   });
   $('.menu').sticky();
 
   $('.menu').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
     duration: 800,
-    offset: -50
+    // offset: -20
   });
   $('.block--timetable').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
     duration: 800,
-    offset: -200
+    offset: -100
   });
 });
 
@@ -28,6 +28,8 @@ $.fn.smoothScroll = function(options) {
         $('html,body').animate({
           scrollTop: target.offset().top + options.offset
         }, options.duration);
+        window.location.hash = hash;
+        return false;
     }
   });
 };
