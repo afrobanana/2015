@@ -13,7 +13,7 @@ $(function() {
   $('.block--timetable').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
     duration: 800,
-    offset: -100
+    offset: -150
   });
 });
 

@@ -39,13 +39,13 @@ strong {
     color: inherit;
     text-decoration: none; }
 
-.block--directions--content h3, .block--volunteer--content h3, .block--credits--content h3, .block--facilities--entry--title, .block--credits--entry--title {
+.block--directions--content h3, .block--volunteer--content h3, .block--credits--content h3, .block--tickets--content h3, .block--facilities--entry--title, .block--credits--entry--title {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.2em;
   text-shadow: 0 0 6px #151414; }
 
-.block--directions--content a, .block--volunteer--content a, .block--credits--content a, .lineup-entry-content a, .block--credits--entries a {
+.block--directions--content a, .block--volunteer--content a, .block--credits--content a, .block--tickets--content a, .lineup-entry-content a, .block--credits--entries a {
   text-decoration: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
 
@@ -103,12 +103,13 @@ strong {
   z-index: 0;
   left: -50px; }
   #beams svg {
-    width: 515px;
+    width: 650px;
     margin: 0 auto;
     display: block;
-    margin-top: -290px; }
+    margin-top: -280px; }
 
 .copyright {
+  margin-top: 4em;
   text-align: center;
   font-size: 0.85em; }
 
@@ -176,13 +177,17 @@ strong {
   @media only screen and (max-width: 480px) {
     .menu {
       position: absolute;
-      height: 100%;
       background-color: rgba(0, 0, 0, 0.7); }
       .menu.is-sticky {
-        position: absolute;
-        height: 100%; }
+        position: fixed;
+        top: 0;
+        text-align: center; }
+        .menu.is-sticky > ol > li {
+          display: inherit; }
       .menu > ol > li {
-        display: block; } }
+        display: block; }
+      .menu .menu--item {
+        font-size: 0.8em; } }
 
 .menu--item {
   padding: 0.5em 2.5em;
@@ -212,6 +217,17 @@ strong {
   text-align: center;
   position: relative;
   margin-bottom: 48px; }
+  .block--intro--flyer span {
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    height: 148px;
+    width: 310px;
+    top: 65%;
+    left: 46%;
+    transform: translateX(-50%); }
   .block--intro--flyer img {
     max-height: 600px;
     position: relative;
@@ -443,9 +459,15 @@ strong {
   display: inline-block;
   width: 100%; }
 
+.block--credits--entry--content em {
+  font-style: normal;
+  font-size: 0.8em;
+  padding: 0.2em 0.3em;
+  display: inline-block; }
+
 .block--timetable {
   position: absolute;
-  top: 160px;
+  top: 90px;
   max-width: 980px;
   width: 100%;
   transform: translate3d(0, 0, 0); }
@@ -495,7 +517,7 @@ strong {
   font-size: 1.2em;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   letter-spacing: 1px;
-  color: #ebbc5c;
+  color: #CB8696;
   display: inline-block;
   margin-bottom: 8px; }
 
@@ -522,96 +544,67 @@ strong {
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 1px; }
 
+.block--tickets .block--main {
+  overflow: hidden; }
+
+.block--tickets--content {
+  float: left;
+  max-width: 60%; }
+  .block--tickets--content ul {
+    margin-bottom: 32px; }
+
+.block--tickets--extras {
+  font-size: 0.9em;
+  float: right;
+  width: 33%;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .block--tickets--extras ul {
+    list-style: none; }
+
 .block--tickets--purchase {
-  -moz-column-count: 3;
+  -moz-column-count: 2;
   -moz-column-gap: 16px;
   -moz-column-width: auto;
-  -webkit-column-count: 3;
+  -webkit-column-count: 2;
   -webkit-column-gap: 16px;
   -webkit-column-width: auto;
-  column-count: 3;
+  column-count: 2;
   column-gap: 16px;
   column-width: auto;
   vertical-align: top;
-  margin-bottom: 32px; }
-
-.block--tickets--purchase--item {
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  -o-column-break-inside: avoid;
-  -ms-column-break-inside: avoid;
-  column-break-inside: avoid;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  transform: translate3d(0, 0, 0); }
-  .block--tickets--purchase--item .block--tickets--purchase--title {
-    color: #111;
-    font-family: Slackey,cursive;
-    font-weight: 100;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    padding: .5em .5em .5em 2em;
-    font-size: 1.6em;
-    white-space: nowrap;
+  margin: 32px 0; }
+  .block--tickets--purchase .block--tickets--purchase--item {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
     position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 180px;
-    text-align: left;
-    margin: 0 auto;
-    background: linear-gradient(135deg, transparent 10px, #e5ba65 0) top left, linear-gradient(225deg, transparent 10px, #e5ba65 0) top right, linear-gradient(315deg, transparent 10px, #e5ba65 0) bottom right, linear-gradient(45deg, transparent 10px, #e5ba65 0) bottom left;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #e5ba65 15px); }
-    .block--tickets--purchase--item .block--tickets--purchase--title:before {
-      content: " ";
-      background-color: #3c7083;
-      height: 1em;
-      width: 1em;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      border-radius: 100%;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-      transform: translateY(-50%) translateX(50%); }
-    .block--tickets--purchase--item .block--tickets--purchase--title span {
-      font-size: .5em;
-      display: block;
-      text-transform: uppercase;
-      text-align: left;
-      color: #fff;
-      text-shadow: 0 0 2px #000; }
-  .block--tickets--purchase--item .block--tickets--purchase--content {
-    font-size: 0.9em;
-    padding: 16px; }
-  .block--tickets--purchase--item .block--tickets--purchase--action {
+    text-align: center; }
+    .block--tickets--purchase .block--tickets--purchase--item img {
+      display: block; }
+  .block--tickets--purchase .block--tickets--purchase--action {
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
     background-color: #4fb0d0;
     text-decoration: none;
-    padding: 0.4em 3em 0.4em 0.4em;
+    padding: 0.4em 1.4em;
     display: inline-block;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
-  .block--tickets--purchase--item .block--tickets--purchase--price {
-    background-color: #3a849d;
-    padding: 0.3em;
-    line-height: 1;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 2em 0 0; }
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border-radius: 4px; }
 
-.block--tickets--purchase--item--two-days {
-  font-size: 1.1em; }
-  .block--tickets--purchase--item--two-days .block--tickets--purchase--title {
-    max-width: none;
-    background: linear-gradient(135deg, transparent 10px, orange 0) top left, linear-gradient(225deg, transparent 10px, orange 0) top right, linear-gradient(315deg, transparent 10px, orange 0) bottom right, linear-gradient(45deg, transparent 10px, orange 0) bottom left;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, orange 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, orange 15px); }
-
-.block--sponsors .block--header {
-  display: none; }
+.block--sponsors {
+  border-top: 3px solid rgba(255, 255, 255, 0.6);
+  padding-top: 48px;
+  margin-top: 80px; }
+  .block--sponsors .block--header,
+  .block--sponsors .block--content {
+    display: none; }
 
 .page--header {
   display: none; }
