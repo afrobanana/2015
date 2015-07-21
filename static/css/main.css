@@ -161,10 +161,6 @@ strong {
   .menu svg, .menu li, .menu ol {
     display: inline-block;
     vertical-align: middle; }
-  .menu .aux {
-    position: absolute;
-    width: auto;
-    text-align: center; }
   .menu .active > ul {
     top: 100%;
     visibility: visible;
@@ -206,14 +202,6 @@ strong {
   display: block;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0 0 7px 7px; }
-
-.menu--item--facebook,
-.menu--item--twitter {
-  position: fixed;
-  right: -80px; }
-
-.menu--item--facebook {
-  bottom: -50px; }
 
 @-webkit-keyframes upper {
   0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
@@ -620,13 +608,51 @@ strong {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     border-radius: 4px; }
 
-.block--sponsors {
-  border-top: 3px solid rgba(255, 255, 255, 0.6);
-  padding-top: 48px;
-  margin-top: 80px; }
-  .block--sponsors .block--header,
-  .block--sponsors .block--content {
-    display: none; }
+.block--sponsors .block--header,
+.block--sponsors .block--content {
+  display: none; }
+
+.block--social {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 32px 0;
+  box-sizing: border-box;
+  margin: 16px -16px;
+  text-align: center; }
+
+.block--social--links {
+  margin: 0 0 32px 0;
+  list-style: none; }
+
+.block--social--link-item {
+  display: inline-block;
+  margin: 0 16px 0 0; }
+  .block--social--link-item img {
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    border-radius: 50%; }
+
+.block--newsletter input[type="email"] {
+  padding: 0.4em 1em;
+  font: inherit;
+  width: 25em;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 8px auto; }
+.block--newsletter input[type="submit"] {
+  font: inherit;
+  padding: 0.3em 2em;
+  display: inline-block;
+  background-color: #e5b163;
+  border: 2px solid #a6824c;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(231, 174, 88, 0.85);
+  color: #fff;
+  cursor: pointer; }
+
+.block--newsletter--help-text {
+  font-size: 0.85em; }
 
 .page--header {
   display: none; }
