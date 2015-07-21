@@ -113,6 +113,18 @@ strong {
   text-align: center;
   font-size: 0.85em; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("/static/fonts/roboto-light/roboto-light.eot");
+  src: url("/static/fonts/roboto-light/roboto-light.eot?#iefix") format("embedded-opentype"), url("/static/fonts/roboto-light/roboto-light.woff2") format("woff2"), url("/static/fonts/roboto-light/roboto-light.woff") format("woff"), url("/static/fonts/roboto-light/roboto-light.ttf") format("truetype"), url("/static/fonts/roboto-light/roboto-light.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Amatic SC';
+  src: url("/static/fonts/amaticsc/amaticsc-regular.eot");
+  src: url("/static/fonts/amaticsc/amaticsc-regular.eot?#iefix") format("embedded-opentype"), url("/static/fonts/amaticsc/amaticsc-regular.woff2") format("woff2"), url("/static/fonts/amaticsc/amaticsc-regular.woff") format("woff"), url("/static/fonts/amaticsc/amaticsc-regular.ttf") format("truetype"), url("/static/fonts/amaticsc/amaticsc-regular.svg#amatic_scregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 .menu {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
