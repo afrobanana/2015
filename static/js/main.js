@@ -27,7 +27,7 @@ $.fn.smoothScroll = function(options) {
         $('html,body').animate({
           scrollTop: target.offset().top + options.offset
         }, options.duration);
-        window.location.hash = hash;
+        window.history.pushState( {} , null, hash);
         return false;
     }
   });
