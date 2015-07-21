@@ -126,7 +126,7 @@ strong {
   z-index: 1000;
   max-width: 980px;
   width: 100%;
-  top: 0; }
+  top: -2em; }
   .menu.is-sticky {
     position: fixed;
     top: 32px;
@@ -153,11 +153,12 @@ strong {
   .menu > ol {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     transition: all 200ms;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    right: 0; }
   .menu svg, .menu li, .menu ol {
     display: inline-block;
     vertical-align: middle; }
@@ -218,7 +219,7 @@ strong {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
-    top: 320px;
+    top: 370px;
     left: 46%;
     transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg); }
     .block--intro--flyer .block--intro--sign .block--intro--sign--on,
