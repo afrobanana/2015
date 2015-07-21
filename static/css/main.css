@@ -177,7 +177,8 @@ strong {
   @media only screen and (max-width: 480px) {
     .menu {
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.7); }
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 0; }
       .menu.is-sticky {
         position: fixed;
         top: 0;
@@ -187,7 +188,8 @@ strong {
       .menu > ol > li {
         display: block; }
       .menu .menu--item {
-        font-size: 0.8em; } }
+        font-size: 0.8em;
+        padding: 0.5em 2em; } }
 
 .menu--item {
   padding: 0.5em 2.5em;
@@ -213,22 +215,39 @@ strong {
 .menu--item--facebook {
   bottom: -50px; }
 
+@-webkit-keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity: 0.9; }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity: 0.2; } }
 .block--intro--flyer {
   text-align: center;
   position: relative;
   margin-bottom: 48px; }
-  .block--intro--flyer span {
+  .block--intro--flyer .block--intro--sign {
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
-    height: 148px;
-    width: 310px;
-    top: 65%;
+    top: 320px;
     left: 46%;
-    transform: translateX(-50%); }
-  .block--intro--flyer img {
+    transform: translate3d(0, 0, 0) translateX(-50%) rotate(-6deg); }
+    .block--intro--flyer .block--intro--sign .block--intro--sign--on,
+    .block--intro--flyer .block--intro--sign .block--intro--sign--off {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform: translate3d(0, 0, 0); }
+    .block--intro--flyer .block--intro--sign .block--intro--sign--on {
+      z-index: 1;
+      -webkit-animation: upper 8s linear infinite; }
+    .block--intro--flyer .block--intro--sign .block--intro--sign--off {
+      z-index: 2;
+      top: 45px; }
+  .block--intro--flyer .block--intro--egg img {
     max-height: 600px;
     position: relative;
     z-index: 1; }
@@ -429,7 +448,7 @@ strong {
   column-gap: 16px;
   column-width: auto;
   vertical-align: top; }
-  .block--credits--content p {
+  .block--credits--content p, .block--credits--content img {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     -o-column-break-inside: avoid;
@@ -437,6 +456,8 @@ strong {
     column-break-inside: avoid;
     display: inline-block;
     width: 100%; }
+  .block--credits--content img {
+    width: auto; }
 
 .block--credits--entries {
   -moz-column-count: 3;

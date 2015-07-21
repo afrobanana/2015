@@ -7,8 +7,7 @@ $(function() {
 
   $('.menu').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
-    duration: 800,
-    // offset: -20
+    duration: 800
   });
   $('.block--timetable').smoothScroll({
     targets: 'a[href^=#]:not([href=#])',
