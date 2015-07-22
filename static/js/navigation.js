@@ -24,7 +24,7 @@
           offset_orig = element.offset = element.offset || offset,
           method = top <= offset_orig  ? 'removeClass' : 'addClass';
       $el[method]('is-sticky');
-      console.warn(top, $el.offset(), offset_orig, method);
+      // console.warn(top, $el.offset(), offset_orig, method);
     });
   }
 
