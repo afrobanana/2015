@@ -608,8 +608,6 @@ strong {
     width: 100%;
     position: relative;
     text-align: center; }
-    .block--tickets--purchase .block--tickets--purchase--item img {
-      display: block; }
   .block--tickets--purchase .block--tickets--purchase--action {
     position: absolute;
     bottom: 55px;
