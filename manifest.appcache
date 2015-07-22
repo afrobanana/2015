@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Time: Wed Jul 22 2015 13:48:39 GMT+0300 (EEST)
+# Time: Wed Jul 22 2015 13:52:56 GMT+0300 (EEST)
 
 CACHE:
 index.html
@@ -41,6 +41,7 @@ static/images/social/instagram-50x50-0c4820.png
 static/images/social/twitter-50x50-413655.png
 static/images/social/vimeo-50x50-f1634c.png
 static/images/sponsors-980x124-f6f06e.png
+static/images/paypal-171x47-4cf09f.gif
 static/fonts/amaticsc/amaticsc-regular.eot
 static/fonts/roboto-light/roboto-light.eot
 static/fonts/amaticsc/amaticsc-regular.svg
@@ -53,3 +54,4 @@ static/fonts/amaticsc/amaticsc-regular.woff2
 static/fonts/roboto-light/roboto-light.woff2
 
 NETWORK:
+*
