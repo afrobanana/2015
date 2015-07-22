@@ -1,10 +1,10 @@
 CACHE MANIFEST
-# Time: Wed Jul 22 2015 13:04:44 GMT+0300 (EEST)
+# Time: Wed Jul 22 2015 13:05:54 GMT+0300 (EEST)
 
 CACHE:
-https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif
-https://www.paypalobjects.com/en_US/i/scr/pixel.gif
 index.html
+static/js/abr-2015.min.js
+static/css/abr-2015.min.css
 static/images/lineup/abr-radio-344x0-e1366e.jpg
 static/images/lineup/afro-banda-344x0-a2b945.jpg
 static/images/lineup/afrofox-344x0-4a947e.jpg
