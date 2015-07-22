@@ -24,10 +24,12 @@
 }
 
 .lineup-entry-image {
-  float: left;
+  @include media(small-plus) {
+    max-width: 35%;
+    float: left;
+  }
   box-shadow: 0 0 40px rgba(255,255,255,0.5);
   line-height: 1;
-  max-width: 35%;
   img {
     vertical-align: middle;
   }
@@ -37,8 +39,10 @@
 .lineup-entry-content,
 .lineup-entry-links,
 .lineup-entry-sessions {
-  float: right;
-  width: 63.5%
+  @include media(small-plus) {
+    float: right;
+    width: 63.5%
+  }
 }
 
 .lineup-entry-name {

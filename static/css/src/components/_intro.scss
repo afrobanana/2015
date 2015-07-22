@@ -1,10 +1,52 @@
+@-webkit-keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:0.9;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.2;
+  }
+}
+
 .block--intro--flyer {
   text-align: center;
   position: relative;
   margin-bottom: ($gutter * 3);
-  img {
-    height: 600px;
-    position: relative;
-    z-index: 1;
+
+  .block--intro--sign {
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+
+    top: 370px;
+    left: 46%;
+    transform: translate3d(0,0,0) translateX(-50%) rotate(-8deg);
+
+    .block--intro--sign--on,
+    .block--intro--sign--off {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform: translate3d(0,0,0);
+    }
+
+    .block--intro--sign--on {
+      z-index: 1;
+      -webkit-animation: upper 6s linear infinite;
+    }
+    .block--intro--sign--off {
+      z-index: 2;
+    }
+  }
+
+  .block--intro--egg {
+    img {
+      max-height: 600px;
+      position: relative;
+      z-index: 1;
+    }
   }
 }

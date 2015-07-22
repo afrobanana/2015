@@ -30,7 +30,6 @@
   @else if $media == xlarge {
     @media only screen and (min-width: 1025px) { @content; }
   }
-
 }
 
 @mixin column($count: 0, $gap: $gutter, $width: auto) {

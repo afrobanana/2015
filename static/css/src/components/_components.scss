@@ -1,22 +1,6 @@
-section[class^="block--"] {
-  // margin-bottom: ($gutter * 4);
-}
-
 .block--header {
   .block--title {
     @extend %page-title;
-    padding-top: ($gutter * 3);
-    // text-align: left;
-    // font-weight: 100;
-    // // margin: ($gutter * 5) 0 ($gutter) 0;
-    // margin: 0 0 ($gutter) 0;
-    // font-family: 'Trochut', cursive;
-    // font-weight: 100;
-    // font-size: 2.65em;
-    // display: inline-block;
-    // color: rgb(229, 186, 101);
-    // text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    // text-transform: uppercase;
   }
 }
 
@@ -31,3 +15,4 @@ section[class^="block--"] {
 @import "timetable";
 @import "tickets";
 @import "sponsors";
+@import "social";

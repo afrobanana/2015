@@ -1,5 +1,5 @@
 {% assign page = site.data.about %}
-{% assign staff = site.data.staff %}
+{% assign staff = site.data.staff | to_array | sort:"priority" %}
 <section class="block--credits">
   <header class="block--header">
     <h2 class="block--title">Production</h2>
@@ -7,10 +7,10 @@
   <main class="block--main">
     <div class="block--credits--content">
       {{ page.content | markdownify }}
+      {% image 200xAUTO abr.png %}
     </div>
     <div class="block--credits--entries">
-      {% for entry in staff %}
-      {% assign category = entry[1] %}
+      {% for category in staff %}
       <dl class="block--credits--entry">
         <dt class="block--credits--entry--title">{{ category.title }}</dt>
         <dd class="block--credits--entry--content">{{ category.content | markdownify }}</dd>

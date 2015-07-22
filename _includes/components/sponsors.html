@@ -4,19 +4,10 @@
   <header class="block--header">
     <h2 class="block--title">{{ page.title }}</h2>
   </header>
-  <main class="block--main block--text">
+  <main class="block--content block--text">
     {{ page.content | markdownify }}
   </main>
-  <main class="block--main block--sponsors-entries">
-    {% for sponsor in sponsors %}
-      {% assign id = sponsor[0] %}
-      {% assign entry = sponsor[1] %}
-      {% if id != 'sponsors' %}
-      <div class="sponsors-entry">
-        {% if entry.link %}<a href="{{ entry.link }}" title="{{ entry.title }}">{% endif %}<img src="{% image sponsors/{{ id }}.png src %}" alt="{{ entry.title }}">{% if entry.link %}</a>{% endif %}
-          {{ entry.content | markdownify }}
-      </div>
-      {% endif %}
-    {% endfor %}
+  <main class="block--main">
+    {% image 980xAUTO sponsors.png %}
   </main>
 </section>

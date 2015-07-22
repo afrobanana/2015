@@ -2,36 +2,36 @@
 <section class="block--tickets">
   <main class="block--main">
     <div class="block--tickets--purchase">
-      <dl class="block--tickets--purchase--item">
-        <dt class="block--tickets--purchase--title"><span>Single Day</span> 21<sup>st</sup> August</dt>
-        <dd class="block--tickets--purchase--content">
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€15</span> Purchase</a>
-        </dd>
-      </dl>
-      <dl class="block--tickets--purchase--item block--tickets--purchase--item--two-days">
-        <dt class="block--tickets--purchase--title"><span>Two Days</span> 21 &amp; 22 August</dt>
-        <dd class="block--tickets--purchase--content">
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€20</span> Purchase</a>
-        </dd>
-      </dl>
-      <dl class="block--tickets--purchase--item">
-        <dt class="block--tickets--purchase--title"><span>Single Day</span> 22<sup>st</sup> August</dt>
-        <dd class="block--tickets--purchase--content">
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <p>dasd dadasd</p>
-          <a class="block--tickets--purchase--action" href=""><span class="block--tickets--purchase--price">€15</span> Purchase</a>
-        </dd>
-      </dl>
+      <div class="block--tickets--purchase--item">
+        {% image 300xAUTO ticket-one.jpg %}
+        <form action="https://www.paypal.com/cgi-bin/webscr"
+              method="post"
+              target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="HUV2YRYH83X4E">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+      <div class="block--tickets--purchase--item">
+        {% image 300xAUTO ticket-two.jpg %}
+        <!-- <a class="block--tickets--purchase--action" href="">Purchase Now</a> -->
+        <form action="https://www.paypal.com/cgi-bin/webscr"
+              method="post"
+              target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="VQDPG7R3A7MZJ">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+      </div>
     </div>
     <div class="block--tickets--content">
       {{ page.content | markdownify }}
     </div>
+    <aside class="block--tickets--extras">
+      {{ page.extras | markdownify }}
+    </aside>
   </main>
 </section>

@@ -206,12 +206,8 @@ module.exports = function(grunt) {
         options: {
           basePath: '<%= pkg.build_dir %>',
           network: [
-            // 'https://fonts.googleapis.com/css?family=Amatic+SC',
-            // 'https://fonts.gstatic.com/s/amaticsc/v6/DPPfSFKxRTXvae2bKDzp5JBw1xU1rKptJj_0jans920.woff2',
-            // 'https://fonts.googleapis.com/css?family=Slackey',
-            // 'https://fonts.gstatic.com/s/slackey/v6/0MUhmNrdbF-OYk8JDhRKYQLUuEpTyoUstqEm5AMlJo4.woff2',
-            // 'http://*',
-            // 'https://*'
+            'http://*',
+            'https://*'
           ],
           verbose: false,
           timestamp: true,
@@ -220,11 +216,19 @@ module.exports = function(grunt) {
         src: [
           // pages
           '**/*.html',
+
           // files
           '**/js/*.min.js',
           '**/css/*.min.css',
           '**/*.jpg',
           '**/*.png',
+
+          // fonts
+          '**/*.eot',
+          '**/*.svg',
+          '**/*.ttf',
+          '**/*.woff',
+          '**/*.woff2',
         ],
         dest: '<%= pkg.build_dir %>/manifest.appcache'
       }
@@ -266,6 +270,7 @@ module.exports = function(grunt) {
                      // 'clean:build',
                      'build',
                      'minify',
+                     'manifest',
                      'push',
                      'clean:grunt',
                      'clean:tmp',
@@ -308,6 +313,5 @@ module.exports = function(grunt) {
                      // 'newer:rev',
                      'usemin',
                      'htmlmin',
-                     // 'manifest',
   ]);
 };

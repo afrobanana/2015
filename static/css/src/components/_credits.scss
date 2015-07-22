@@ -4,12 +4,13 @@
 
   @include column(2);
 
-  p {
+  p, img {
     @include column-content;
-    // display: block;
   }
-  h3 {
-    // -webkit-column-break-before:always;
+  img {
+    width: auto;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -22,8 +23,16 @@
 }
 .block--credits--entry {
   @include column-content;
+
 }
 .block--credits--entry--title {
   @extend %subtitle;
 }
-.block--credits--entry--content {}
+.block--credits--entry--content {
+  em {
+    font-style: normal;
+    font-size: 0.8em;
+    padding: 0.2em 0.3em;
+    display: inline-block;
+  }
+}

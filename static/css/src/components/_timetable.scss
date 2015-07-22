@@ -1,9 +1,12 @@
 .block--timetable {
   position: absolute;
-  top: 160px;
+  top: 90px;
   max-width: 980px;
   width: 100%;
   transform: translate3d(0, 0, 0);
+  @include media(small) {
+    display: none;
+  }
 }
 .block--timetable--sections {
   @include column(2);
@@ -11,13 +14,13 @@
   line-height: 1;
   transition: all 500ms;
   list-style: none;
-
   ol {
     list-style: none;
   }
 }
 .block--timetable--section {
   @include column-content;
+
   &:last-child {
     text-align: right;
   }
@@ -37,7 +40,8 @@
   font-size: 1.2em;
   text-shadow: 0 0 10px rgba(0,0,0,0.4);
   letter-spacing: 1px;
-  color: rgb(235, 188, 92);
+  // color: rgb(235, 188, 92);
+  color: #CB8696;
   display: inline-block;
   margin-bottom: $gutter/2;
 }

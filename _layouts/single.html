@@ -21,24 +21,14 @@
         {% include components/lineup/list.html %}
       </div>
 
-      <div id="festival--projects" style="display:none;">
-        {% assign lineup = site.data.lineup | to_array | sort:"date" %}
-        {% assign lineup_dates = lineup | group_by:"date"  %}
+      <div id="festival--projects">
         <section class="block--projects">
           <header class="block--header">
             <h2 class="block--title">Projects</h2>
           </header>
           <main class="block--main">
-            <dl class="block--projects--entries">
-                {% for entry in lineup_dates[0].items %}
-                  {% assign id = entry.id %}
-                  {% if id != 'lineup' %}
-                  <dd class="projects-entry" id="projects--{{ id }}">
-                  {% include components/lineup/list-item.html id=id entry=entry %}
-                  </dd>
-                  {% endif %}
-                {% endfor %}
-            </dl>
+            <p>We're delighted to announce that following our OPEN CALL, the artistic visas have now been granted to a group of talented and inventive individuals who are descending on the Republic to materialise their proposed dreams!</p>
+            <p>There will be twelve creative projects in total with an interactive nature adding to the thrilling sensory experience of The Afro Banana Republic Festival. Details on all artistic projects will be coming soon so watch this space!</p>
           </main>
         </section>
       </div>
@@ -49,16 +39,13 @@
       <header class="page--header">
         <h1 class="page--title">{{ location.title }}</h1>
       </header>
-      <!-- <div id="location--photos">
-        {% image 980xAUTO location/location.jpg %}
-      </div>
-       --><div id="location--directions">
+      <div id="location--directions">
         {% include components/directions.html %}
       </div>
+      <div id="location--photos">
+        {% image 980xAUTO location.jpg %}
+      </div>
       <div id="location--facilities">
-        <!-- <div id="location--photos"> -->
-          {% image 980xAUTO location/location.jpg %}
-        <!-- </div>       -->
         {% include components/facilities.html %}
       </div>
     </section>
@@ -77,18 +64,24 @@
       <div id="info--production">
         {% include components/credits.html %}
       </div>
-      <div id="info--volunteer">
-        {% include components/volunteer.html %}
-      </div>
     </section>
 
-    <section class="page page--sponsors" id="sponsors">
-      <header class="page--header">
-        <h1 class="page--title">Sponsors</h1>
-      </header>
       <div id="info--sponsors">
         {% include components/sponsors.html %}
       </div>
+
+    <section class="page page--social" id="social">
+      <section class="block--social">
+        <main>
+          <ul class="block--social--links">
+            <li class="block--social--link-item block--social--link-item--facebook"><a href="https://www.facebook.com/TheAfroBananaRepublic" target="_blank">{% image 50xAUTO social/facebook.png %}</a></li>
+            <li class="block--social--link-item block--social--link-item--twitter"><a href="https://twitter.com/afrobananarpb" target="_blank">{% image 50xAUTO social/twitter.png %}</a></li>
+            <li class="block--social--link-item block--social--link-item--instagram"><a href="https://instagram.com/afrobananarpbc" target="_blank">{% image 50xAUTO social/instagram.png %}</a></li>
+            <li class="block--social--link-item block--social--link-item--vimeo"><a href="https://vimeo.com/alternativebrainsrule/videos" target="_blank">{% image 50xAUTO social/vimeo.png %}</a></li>
+          </ul>
+          {% include social/newsletter.signup.html %}
+        </main>
+      </section>
     </section>
 
     {% include footer.html %}
