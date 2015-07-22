@@ -20,11 +20,11 @@
     elements.forEach(function(element) {
       var $el = element.$el,
           top = $(element.parent).scrollTop(),
-          height = $el[0].offsetHeight,
           offset = $el.offset().top,
           offset_orig = element.offset = element.offset || offset,
-          method = top < (offset_orig)  ? 'removeClass' : 'addClass';
+          method = top <= offset_orig  ? 'removeClass' : 'addClass';
       $el[method]('is-sticky');
+      console.warn(top, $el.offset(), offset_orig, method);
     });
   }
 
