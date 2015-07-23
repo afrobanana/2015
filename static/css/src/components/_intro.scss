@@ -12,6 +12,10 @@
   position: relative;
   margin-bottom: ($gutter * 3);
 
+  @include media(small) {
+    display: none;
+  }
+
   .block--intro--sign {
     position: absolute;
     background-position: center center;

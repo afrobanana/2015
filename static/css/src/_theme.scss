@@ -52,11 +52,11 @@
 #beams {
   position: absolute;
   z-index: 0;
-  // top: -40px;
   left: -50px;
 
   svg {
     width: 650px;
+    max-width: 100%;
     margin: 0 auto;
     display: block;
     margin-top: -280px;

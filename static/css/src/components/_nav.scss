@@ -1,11 +1,11 @@
 .menu {
   &.is-sticky {
     position: fixed;
-    top: $gutter * 2;
     text-align: right;
     right: auto;
-
+    top: 0;
     > ol {
+      top: $gutter * 2;
       width: auto;
 
       &:hover {
@@ -19,7 +19,6 @@
   text-align: center;
   text-transform: capitalize;
 
-  transition: all 600ms;
   transform: translate3d(0, 0, 0);
 
   line-height: 1;
@@ -30,9 +29,9 @@
 
   max-width: 980px;
   width: 100%;
-  top: -2em;
 
   li {
+    text-align: center;
     ul {
       font-size: 0.8em;
       visibility: hidden;
@@ -51,14 +50,16 @@
   }
 
   > ol {
+    position: absolute;
+    right: 0;
+    top: -2em;
     margin: 0;
     padding: 0;
-    transition: all 200ms;
+    transition: all 600ms;
     background-color: rgba(0,0,0,0.2);
     border-radius: 4px;
     width: 100%;
-    position: absolute;
-    right: 0;
+    transform: translate3d(0, 0, 0);
 
     > li {
 
@@ -86,25 +87,19 @@
   }
 
   @include media(small) {
-    position: absolute;
     background-color: rgba(0,0,0,0.7);
     border-radius: 0;
-
-    &.is-sticky {
-      position: fixed;
-      top: 0;
-      text-align: center;
-
-      > ol > li {
-        display: inherit;
-      }
+    > ol {
+      top: 0 !important;
+      left: 0;
     }
     > ol > li {
-      display: block;
+      float: left;
+      width: 25%;
     }
     .menu--item {
       font-size: 0.8em;
-      padding: 0.5em 2em;
+      padding: 0.5em;
     }
   }
 }

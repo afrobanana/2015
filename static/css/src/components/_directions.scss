@@ -6,16 +6,15 @@
 }
 .block--directions--content {
   @extend %block--text;
-  @include column(3);
 
-  overflow: hidden;
-  // border-bottom: 10px solid rgba(255,255,255,0.5);
-
-  h3, ol {
-    @include column-content;
-
-    display: block;
+  @include media(small-plus) {
+    @include column(3);
+    h3, ol {
+      @include column-content;
+      display: block;
+    }
   }
+
   ol {
     margin-bottom: 1em;
   }
@@ -25,7 +24,6 @@
 }
 .block--directions--map {
   margin: ($gutter * 2) 0;
-  // padding: $gutter 0;
   line-height: 1;
 
   a {

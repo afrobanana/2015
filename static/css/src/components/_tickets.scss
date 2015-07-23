@@ -6,24 +6,15 @@
 
 .block--tickets--content {
   @extend %block--text;
-  // @include column(3);
+
   float: left;
   max-width: 60%;
-  // margin: ($gutter * 2) 0;
 
-  h3, ul {
-    // @include column-content;
-  }
-  h3 {
-    // -webkit-column-break-before: always;
-  }
   ul {
-    // list-style: none;
     margin-bottom: 32px;
   }
 }
 .block--tickets--extras {
-  // margin: ($gutter * 2) 0;
   font-size: 0.9em;
   float: right;
   width: 33%;
@@ -35,18 +26,17 @@
   }
 }
 .block--tickets--purchase {
-  @include column(2);
-  margin: ($gutter * 2) 0;
+  @include media(small-plus) {
+    @include column(2);
+    .block--tickets--purchase--item {
+      @include column-content;
+    }
+  }
 
   .block--tickets--purchase--item {
-    @include column-content;
-
     position: relative;
     text-align: center;
-
-    img {
-      // display: block
-    }
+    margin: ($gutter * 2) 0;
   }
 
   .block--tickets--purchase--action {

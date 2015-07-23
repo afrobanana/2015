@@ -14,16 +14,16 @@
   }
 }
 
-
 .block--credits--entries {
-  @include column(3);
+  @include media(small-plus) {
+    @include column(3);
+    .block--credits--entry {
+      @include column-content;
+    }
+  }
   a {
     @extend %link;
   }
-}
-.block--credits--entry {
-  @include column-content;
-
 }
 .block--credits--entry--title {
   @extend %subtitle;

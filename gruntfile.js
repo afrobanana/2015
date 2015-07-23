@@ -206,9 +206,9 @@ module.exports = function(grunt) {
         options: {
           basePath: '<%= pkg.build_dir %>',
           network: [
-            'http://*',
-            'https://*'
+            '*'
           ],
+          cache: [],
           verbose: false,
           timestamp: true,
           hash: true,
@@ -222,6 +222,7 @@ module.exports = function(grunt) {
           '**/css/*.min.css',
           '**/*.jpg',
           '**/*.png',
+          '**/*.gif',
 
           // fonts
           '**/*.eot',

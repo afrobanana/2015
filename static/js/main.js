@@ -3,17 +3,24 @@ $(function() {
     target: '.menu a',
     offset: 50
   });
-  $('.menu').sticky();
 
-  $('.menu').smoothScroll({
-    targets: 'a[href^=#]:not([href=#])',
-    duration: 800
-  });
-  $('.block--timetable').smoothScroll({
-    targets: 'a[href^=#]:not([href=#])',
-    duration: 800,
-    offset: -150
-  });
+  $('.menu')
+    .sticky()
+    .smoothScroll({
+      targets: 'a[href^=#]:not([href=#])',
+      duration: 800
+    });
+
+  $('.block--timetable')
+    .smoothScroll({
+      targets: '.block--timetable--section--title',
+      duration: 800
+    })
+    .smoothScroll({
+      targets: '.block--timetable--section--entry',
+      duration: 800,
+      offset: -150
+    });
 });
 
 $.fn.smoothScroll = function(options) {

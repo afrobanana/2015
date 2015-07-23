@@ -1,9 +1,10 @@
+<!doctype html>
+
 {% assign title = page.title | append:' .:. ' | append: site.title | strip_newlines %}
 {% assign name = page.layout | remove:'.html' %}
 {% assign canonical = site.baseurl | append:page.url | remove:'index.html' %}
 {% assign images_url = site.baseurl | append:site.assets.images %}
 
-<!doctype html>
 <!--[if lt IE 7 ]><html lang="en"  xmlns:og="http://ogp.me/ns" class="no-js ie6"><![endif]-->
 <!--[if IE 7 ]><html lang="en" xmlns:og="http://ogp.me/ns" class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" xmlns:og="http://ogp.me/ns" class="no-js ie8"><![endif]-->
@@ -41,32 +42,19 @@
   {% if site.keywords %}
   <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
+
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+
+  <!-- build:css {{ site.assets.css }}{{ site.name }}.min.css -->
   <link rel="stylesheet" href="{{ site.assets.css }}main.css">
   <!-- endbuild -->
+
   <!-- build:js {{ site.assets.js }}{{ site.name }}.min.js -->
   <script type="text/javascript" src="{{ site.assets.js }}libs/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}libs/bootstrap.scrollspy.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}background.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}navigation.js"></script>
   <script type="text/javascript" src="{{ site.assets.js }}main.js"></script>
-  <script type="text/javascript">
-  if (window.applicationCache) {
-    // Check if a new cache is available on page load.
-    window.addEventListener('load', function(e) {
-      window.applicationCache.addEventListener('updateready', function(e) {
-        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-          // Browser downloaded a new app cache.
-          if (confirm('A new version of this site is available. Load it?')) {
-            window.location.reload();
-          }
-        } else {
-          // Manifest didn't changed. Nothing new to server.
-        }
-      }, false);
-    }, false);
-  }
-  </script>
   <!-- endbuild -->
 </head>
 <body class="page--{{ name }}">
