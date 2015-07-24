@@ -12,7 +12,7 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en"
       xmlns:og="http://ogp.me/ns"
-      manifest="{{ site.baseurl }}/manifest.appcache"
+      manifest="http:{{ site.baseurl }}/manifest.appcache"
       class="no-js"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -25,16 +25,12 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta http-equiv="cleartype" content="on">
-  <meta property="fb:admins" content="">
+  <meta property="fb:admins" content="273104166">
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:url" content="http:{{ canonical }}">
   <meta property="og:title" content="{{ title }}">
-  {%  comment %}
-  {% if site.image or page.image %}
-  <meta property="og:image" content="{{ site.baseurl }}{{ site.assets.images }}{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}">
-  {% endif %}
-  {%  endcomment %}
+  <meta property="og:image" content="http:{% image 534xAUTO 2015-festival.jpg src %}">
   {% if site.description or page.description %}
   <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description | strip_html | strip_newlines }}{% endif %}">
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description | strip_html | strip_newlines }}{% endif %}">

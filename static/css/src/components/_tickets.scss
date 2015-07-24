@@ -34,20 +34,7 @@
   }
 
   .block--tickets--purchase--item {
-    position: relative;
     text-align: center;
     margin: ($gutter * 2) 0;
-  }
-
-  .block--tickets--purchase--action {
-    position: absolute;
-    bottom: 55px;
-    left: 20px;
-    background-color: rgba(79, 176, 208, 1);
-    text-decoration: none;
-    padding: 0.4em 1.4em;
-    display: inline-block;
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    border-radius: 4px;
   }
 }

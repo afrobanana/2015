@@ -1,4 +1,4 @@
-@-webkit-keyframes upper {
+@include keyframes(upper) {
   0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
     opacity:0.9;
   }
@@ -25,7 +25,7 @@
 
     top: 370px;
     left: 46%;
-    transform: translate3d(0,0,0) translateX(-50%) rotate(-8deg);
+    @include transform(translate3d(0,0,0) translateX(-50%) rotate(-8deg));
 
     .block--intro--sign--on,
     .block--intro--sign--off {
@@ -34,12 +34,12 @@
       right: 0;
       left: 0;
       bottom: 0;
-      transform: translate3d(0,0,0);
+      @include transform(translate3d(0,0,0));
     }
 
     .block--intro--sign--on {
       z-index: 1;
-      -webkit-animation: upper 6s linear infinite;
+      @include animation(upper 6s linear infinite);
     }
     .block--intro--sign--off {
       z-index: 2;

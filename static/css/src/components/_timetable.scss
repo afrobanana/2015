@@ -3,7 +3,7 @@
   top: 90px;
   max-width: 980px;
   width: 100%;
-  transform: translate3d(0, 0, 0);
+  @include transform(translate3d(0, 0, 0));
   @include media(small) {
     display: none;
   }
@@ -40,7 +40,6 @@
   font-size: 1.2em;
   text-shadow: 0 0 10px rgba(0,0,0,0.4);
   letter-spacing: 1px;
-  // color: rgb(235, 188, 92);
   color: #CB8696;
   display: inline-block;
   margin-bottom: $gutter/2;

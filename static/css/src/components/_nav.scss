@@ -19,7 +19,7 @@
   text-align: center;
   text-transform: capitalize;
 
-  transform: translate3d(0, 0, 0);
+  @include transform(translate3d(0, 0, 0));
 
   line-height: 1;
   border-radius: 7px;
@@ -59,7 +59,7 @@
     background-color: rgba(0,0,0,0.2);
     border-radius: 4px;
     width: 100%;
-    transform: translate3d(0, 0, 0);
+    @include transform(translate3d(0, 0, 0));
 
     > li {
 

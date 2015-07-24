@@ -257,18 +257,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('dev', [
-                     // 'lint',
                      'build',
                      'watch',
   ]);
   grunt.registerTask('srv', [
-                     // 'lint',
                      'build',
                      'minify',
-                     // 'watch',
   ]);
   grunt.registerTask('deploy', [
-                     // 'clean:build',
                      'build',
                      'minify',
                      'manifest',
@@ -294,7 +290,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
                      'config',
                      'shell:jekyllBuild',
-                     // 'manifest'
   ]);
   grunt.registerTask('config', [
                      'convert:config',
@@ -304,14 +299,11 @@ module.exports = function(grunt) {
                      'csslint',
   ]);
   grunt.registerTask('minify', [
-                     // 'lint',
-                     // 'build',
                      'imagemin',
                      'useminPrepare',
                      'concat',
                      'uglify',
                      'cssmin',
-                     // 'newer:rev',
                      'usemin',
                      'htmlmin',
   ]);
