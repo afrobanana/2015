@@ -60,6 +60,10 @@ strong {
     height: 150px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
     z-index: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .wrapper:after {
     position: fixed;
@@ -70,6 +74,10 @@ strong {
     height: 20px;
     background: linear-gradient(transparent, rgba(255, 140, 0, 0.5));
     z-index: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
 .wrapper-inner {
@@ -85,6 +93,10 @@ strong {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 #sky {
@@ -131,6 +143,10 @@ strong {
   font-size: 1.2em;
   text-align: center;
   text-transform: capitalize;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   line-height: 1;
   border-radius: 7px;
@@ -174,6 +190,10 @@ strong {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .menu svg, .menu li, .menu ol {
     display: inline-block;
@@ -222,6 +242,16 @@ strong {
     opacity: 0.9; }
   20%,21.999%,63%,63.999%,65%,69.999% {
     opacity: 0.2; } }
+@-moz-keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity: 0.9; }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity: 0.2; } }
+@keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity: 0.9; }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity: 0.2; } }
 .block--intro--flyer {
   text-align: center;
   position: relative;
@@ -237,6 +267,10 @@ strong {
     z-index: 2;
     top: 370px;
     left: 46%;
+    -webkit-transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg);
+    -moz-transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg);
+    -ms-transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg);
+    -o-transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg);
     transform: translate3d(0, 0, 0) translateX(-50%) rotate(-8deg); }
     .block--intro--flyer .block--intro--sign .block--intro--sign--on,
     .block--intro--flyer .block--intro--sign .block--intro--sign--off {
@@ -245,10 +279,16 @@ strong {
       right: 0;
       left: 0;
       bottom: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
     .block--intro--flyer .block--intro--sign .block--intro--sign--on {
       z-index: 1;
-      -webkit-animation: upper 6s linear infinite; }
+      -webkit-animation: upper 6s linear infinite;
+      -moz-animation: upper 6s linear infinite;
+      animation: upper 6s linear infinite; }
     .block--intro--flyer .block--intro--sign .block--intro--sign--off {
       z-index: 2; }
   .block--intro--flyer .block--intro--egg img {
@@ -502,6 +542,10 @@ strong {
   top: 90px;
   max-width: 980px;
   width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
   @media only screen and (max-width: 480px) {
     .block--timetable {
@@ -616,19 +660,8 @@ strong {
       display: inline-block;
       width: 100%; } }
 .block--tickets--purchase .block--tickets--purchase--item {
-  position: relative;
   text-align: center;
   margin: 32px 0; }
-.block--tickets--purchase .block--tickets--purchase--action {
-  position: absolute;
-  bottom: 55px;
-  left: 20px;
-  background-color: #4fb0d0;
-  text-decoration: none;
-  padding: 0.4em 1.4em;
-  display: inline-block;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-  border-radius: 4px; }
 
 .block--sponsors .block--header,
 .block--sponsors .block--content {
@@ -675,9 +708,6 @@ strong {
 
 .block--newsletter--help-text {
   font-size: 0.85em; }
-
-.page {
-  overflow: hidden; }
 
 .page--header {
   display: none; }
