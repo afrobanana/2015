@@ -540,6 +540,8 @@ strong {
 
 .block--credits--entry--content {
   line-height: 1.2; }
+  .block--credits--entry--content p {
+    margin-bottom: 8px; }
   .block--credits--entry--content em {
     font-style: normal;
     font-size: 0.8em;
