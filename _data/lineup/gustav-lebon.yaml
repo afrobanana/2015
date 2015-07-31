@@ -4,6 +4,7 @@ location:
 label:
 stage: In the Box
 date: 2015-08-21
+time: "00:30"
 priority: 9
 tags:
   - Minimal

@@ -4,6 +4,7 @@ location: CY
 label: klubd
 stage: In the Box
 date: 2015-08-21
+time: "23:00"
 priority: 7
 tags:
   - Minimal

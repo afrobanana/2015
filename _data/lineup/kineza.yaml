@@ -4,6 +4,7 @@ location: CY
 label:
 stage: In the Box
 date: 2015-08-22
+time: "00:00"
 priority: 11
 tags:
   - Electronic

@@ -1,8 +1,9 @@
 
 .block--credits--content {
   @extend %block--text;
-
   @include column(2);
+
+  margin-bottom: ($gutter * 2);
 
   p, img {
     @include column-content;
@@ -25,10 +26,15 @@
     @extend %link;
   }
 }
+.block--credits--entry {
+  margin-bottom: ($gutter * 2);
+}
 .block--credits--entry--title {
   @extend %subtitle;
+  margin-bottom: $gutter;
 }
 .block--credits--entry--content {
+  line-height: 1.2;
   em {
     font-style: normal;
     font-size: 0.8em;
