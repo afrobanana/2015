@@ -35,6 +35,9 @@
 }
 .block--credits--entry--content {
   line-height: 1.2;
+  p {
+    margin-bottom: ($gutter / 2);
+  }
   em {
     font-style: normal;
     font-size: 0.8em;
